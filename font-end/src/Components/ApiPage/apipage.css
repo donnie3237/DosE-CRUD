@@ -1,0 +1,65 @@
+.Allapi{
+    min-height: 83vh;
+    background-color: blueviolet;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.api1{
+    height: 80vh;
+    background-color: rgb(59, 49, 151);
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+.api2{
+    height: 80vh;
+    background-color: rgb(153, 255, 0);
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+.api3{
+    height: 80vh;
+    background-color: rgb(255, 0, 0);
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.Allapi img{
+    width: 30%;
+    margin-left: 7%;
+}
+.textt {
+    margin-left: 4%;
+    margin-right: 7%;
+}
+.textt a{
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: black;
+    padding: 5px 10px;
+    border: 1px solid white;
+    margin-top: 50px;
+    
+}
+.textt p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+.textt a:hover{
+    background-color: white;
+    color: black;
+    transition: all 0.7s;
+    border-radius: 5px;
+}

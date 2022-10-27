@@ -1,0 +1,72 @@
+[
+    {
+    "id":"1",
+    "name":"Dose SoRa",
+    "age":20,
+    "weight":52,
+    "height":175
+    },
+    {
+        "id":"2",
+        "name":"Roronoa Soro",
+        "age":21,
+        "weight":57,
+        "height":181
+    },
+    {
+        "id":"3",
+        "name":"vinsmoke Sanji",
+        "age":21,
+        "weight":52,
+        "height":180
+    },
+    {
+        "id":"4",
+        "name":"Tony Tony Chopper",
+        "age":17,
+        "weight":36,
+        "height":90
+    },
+    {
+        "id":"5",
+        "name":"Monkey D. Luffy",
+        "age":19,
+        "weight":54,
+        "height":174
+    },
+    {
+        "id":"6",
+        "name":"Nico Robin",
+        "age":30,
+        "weight":53,
+        "height":188
+    },
+    {
+        "id":"7",
+        "name":"Brook",
+        "age":90,
+        "weight":30,
+        "height":277
+    },
+    {
+        "id":"8",
+        "name":"God Usopp",
+        "age":19,
+        "weight":56,
+        "height":176
+    },
+    {
+        "id":"9",
+        "name":"Gol D. Roger",
+        "age":"N/a",
+        "weight":52,
+        "height":275
+    },
+    {
+        "id":"10",
+        "name":"Trafalgar D. Water Law",
+        "age":24,
+        "weight":56,
+        "height":192
+    }
+]

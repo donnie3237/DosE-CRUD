@@ -1,0 +1,42 @@
+.edit{
+    width: 100vw;
+    height: 100%;
+    background-color: rgb(28, 28, 220);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.myfrom input{
+    height: 30px;
+    width: 300px;
+    margin: 5px;
+    background-color: rgb(247, 243, 237);
+    color: rgb(25, 4, 116);
+}
+.myfrom textarea{
+    background-color: aliceblue;
+    color: blue;
+    width: 300px;
+}
+.myfrom{
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    margin: 0;
+}
+.editt{
+    background-color: orange;
+    border: none;
+    padding: 5px 15px;
+    margin: 5px 0px;
+    cursor: pointer;
+}
+.etli{
+    background-color: black;
+    padding: 5px 15px;
+    text-decoration: none;
+    font-size: 12px;
+}

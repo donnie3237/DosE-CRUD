@@ -1,0 +1,19 @@
+.det{
+    width: 100vw;
+    background-color: bisque;
+    height: 55vh;
+    padding-left: 10%;
+}
+.close{
+    padding: 5px 10px;
+    background-color: white;
+    border: 1px solid black;
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+}
+.close:hover{
+    background-color: rgb(41, 225, 41);
+    box-shadow: 0 0 5px red, 0 0 10px rgb(190, 190, 8);
+    transition: all .5s;
+}
