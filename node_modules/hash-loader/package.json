@@ -1,0 +1,28 @@
+{
+  "name": "hash-loader",
+  "version": "1.0.0",
+  "description": "Export all modules with a hash based on filename",
+  "main": "index.js",
+  "license": "MIT",
+  "author": {
+    "name": "Michael Rawlings",
+    "email": "mlrawlings@gmail.com",
+    "url": "https://github.com/mlrawlings"
+  },
+  "dependencies": {
+    "string-hash": "^1.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mlrawlings/hash-loader.git"
+  },
+  "homepage": "https://github.com/mlrawlings/hash-loader",
+  "bugs": {
+    "url": "https://github.com/mlrawlings/hash-loader/issues"
+  }
+}
