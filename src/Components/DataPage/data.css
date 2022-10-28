@@ -135,10 +135,12 @@
 .text{
     font-size: 15px;
     color: rgb(3, 3, 3);
-    width: 70%;
+    width: 60%;
     position: absolute;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    right: 0;
+    right: 5%;
+    top: 40%;
+    height: 100%;
 }
 .image{
     margin-top: 50px;
@@ -201,11 +203,12 @@
 }
 .text a{
     text-decoration: none;
-    color: rgb(255, 255, 255);
-    background-color: rgb(5, 100, 32);
-    border: 2px solid rgb(10, 10, 10);
-    border-radius: 1px;
-    padding: 5px 10px;
+    color: rgb(254, 253, 255);
+    background-color: rgb(26, 5, 100);
+    border: 2px solid rgb(17, 3, 105);
+    margin-top: 30%;
+    border-radius: 4px;
+    padding: 10px 15px;
     font-size: 18px;
     font-weight: 600;
     

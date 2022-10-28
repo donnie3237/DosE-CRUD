@@ -47,14 +47,14 @@
     font-weight: bold;
     text-decoration: none;
     background-color: black;
-    padding: 5px 10px;
+    padding: 10px 15px;
     border: 1px solid white;
     margin-top: 50px;
     
 }
 .textt p{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1em;
+    font-size: 1.5em;
     margin-bottom: 20px;
 }
 .textt a:hover{
