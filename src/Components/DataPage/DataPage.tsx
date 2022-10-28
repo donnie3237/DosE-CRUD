@@ -4,6 +4,8 @@ import './data.css'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import {useState} from 'react'
+import {HashLink} from 'react-router-hash-link'
+
 AOS.init();
 function DataPage() {
   const [fix, setFix] = useState(false)
@@ -21,7 +23,7 @@ function DataPage() {
       
         <div className="mongo-head" id='dotenv'>
         <div className={fix ? 'bar fix':'bar'}>
-            <a href="#dotenv">DOTENV</a><a href="#json">JSON</a><a href="#mongoose">CLOUD</a><a href="#compass">COMPASS</a><a href="#nodemon">NODEMON</a>
+            <HashLink to='#dotenv'>DOTENV</HashLink> <HashLink to='json'>JSON</HashLink><HashLink to='#mongoose'>CLOUD</HashLink><HashLink to='compass'>COMPASS</HashLink><HashLink to='nodemon'>NODEMON</HashLink>
           </div>
         </div>
         <div className="big" data-aos='zoom-in' >
