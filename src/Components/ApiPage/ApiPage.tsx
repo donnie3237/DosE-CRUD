@@ -26,7 +26,7 @@ function ApiPage() {
         <img src={require('./img/cors.png')}/>
         <div className="textt">
           <p>CORS คือการสร้างเว็บไซต์ที่สามารถใช้งานได้จากเว็บไซต์อื่นได้ หากคุณทำเว็บเซิร์ฟเวอร์ที่ใช้การดึงAPIแล้วไม่ติดตั้งตัวนี้ลงไป Error กำลังมองหาคุณอยู่</p>
-          <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS" target='blank'>CORS</a>
         </div>
       </div>
     </div>
