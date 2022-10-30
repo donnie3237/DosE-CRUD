@@ -35,7 +35,7 @@ function DataPage() {
               </div>
               <div className="text">
                 <p>.env เอาไว้เก็บข้อมูลสำคัญ ให้ปลอดภัย เช่น รหัสเชื่อม ฐานข้อมูล ,พอร์ตของserver </p>
-                <a href="https://www.dotenv.org/" id='json'>More</a>
+                <a href="https://www.dotenv.org/" id='json' target='blank'>More</a>
               </div>
             </div>
           </div>
@@ -49,7 +49,7 @@ function DataPage() {
                 <p>JSON คือ รูปแบบของ javascript objectใช้สำหรับเเลกเปลี่ยนข้อมูล กับภาษาอื่นๆได้ เช่น PHP C#... โดยมีการเข้ารหัสและถอดรหัส เพื่ออ่านค่าข้อมูล
                   และ ผมใช้ JSON  สำหรับเก็บข้อมูลใน MongoDB
                 </p>
-                <a href="https://www.json.org/" id='mongoose'>More</a>
+                <a href="https://www.json.org/" id='mongoose' target='blank'>More</a>
                 </div>
             </div>
           </div>
@@ -72,7 +72,7 @@ function DataPage() {
                 </div>
               <div className="text">
                 <p>MongoBD compass เป็น โปรแกรมสำหรับจัดการฐานข้อมูลนี้ ซึ่งหาโหลดได้ทางเว็บMongoBD เลย</p>
-                <a href="https://www.mongodb.com/products/compass" id='nodemon'>More</a>
+                <a href="https://www.mongodb.com/products/compass" id='nodemon' target='blank'>More</a>
                 </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ function DataPage() {
                 </div>
               <div className="text">
                 <p>Nodemon ความจริงมันไม่ได้เกี่ยวกับฐานข้อมูลขนาดนั้นแต่พื้นที่มันเหลือก็เลยแทรกมา มันเอาไว้ใช้กับการพัฒนาฝั่งserver สำหรับการใส่สคริป ในไฟล์ package.json</p>
-                <a href="https://nodemon.io/">More</a>
+                <a href="https://nodemon.io/" target='blank'>More</a>
                 </div>
                 </div>
           </div>
