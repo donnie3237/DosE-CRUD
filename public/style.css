@@ -1,6 +1,4 @@
 body{
-    width: 100vw;
-    overflow-x: hidden;
     touch-action: pan-y;
     margin: 0;
     padding: 0%;
