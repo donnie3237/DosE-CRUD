@@ -25,7 +25,7 @@ AOS.init();
 			weight:weight,
 			descrip :desc
 		})
-		setTimeout(()=>{window.location.reload()},3000)
+		// setTimeout(()=>{window.location.reload()},3000)
 
 	}
 
