@@ -1,26 +1,45 @@
 import React from 'react'
-import data from '../data.json'
-import {Link} from 'react-router-dom'
+import {Link , useParams} from 'react-router-dom'
 import './detail.css'
+import { useState ,useEffect } from 'react'
+import axios from 'axios'
+
 
 function Detail() {
+	const [user, setUser] = useState({});
+
+	const { _id } = useParams();
+
+	useEffect(
+		function () {
+			async function getCrudById() {
+				try {
+					const response = await axios.get(`https://dose.herokuapp.com/api/${_id}`);
+					setUser(response.data);
+				} catch (error) {
+					console.log("error", error);
+				}
+			}
+			getCrudById();
+		},
+	);
   return (
-    <div className="det" key={data.id}>
+    <div className="det" >
             <br />
-			<h2>Name:</h2>
+			<h2>Name: {user.name}</h2>
 
 			<p>
-				<b>Age</b>: {data.age}
+				<b>Age</b>: {user.age}
 			</p>
 
 			<p>
-				<b>Height</b>: {data.height}
+				<b>Height</b>: {user.height}
 			</p>
 			<p>
-				<b>Weight</b>: {data.weight}
+				<b>Weight</b>: {user.weight}
 			</p>
 			<p>
-                <b>Description</b>: {}
+                <b>Description</b>: {user.descrip}
             </p>
 			
             <Link to="/list" className="close">

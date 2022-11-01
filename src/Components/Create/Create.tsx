@@ -6,64 +6,38 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import {useNavigate} from 'react-router-dom'
-
 AOS.init();
 
-function Create(props) {
+ function Create(){
 	const [name,setName] = useState('')
 	const [age,setAge]= useState(0)
 	const [height,setHeight]=useState(0)
 	const [weight,setWeight]=useState(0)
 	const [desc,setDesc]=useState('')
 	console.log(name+age+height+weight+desc)
-	
-	const navigate = useNavigate();
 
-	const addData = async e => {
-		e.preventDefault();
-		try {
-		  	  await Axios.post("/api", {
-			  name,age,height,weight,desc
-			}
-		  );
-		  toast.success('your data has been created!', {
-			position: "bottom-right",
-			theme:'dark',
-			autoClose: false,
-			hideProgressBar: true,
-			closeOnClick: false,
-			pauseOnHover: true,
-			draggable: true,
-			progress: 1,
-			});
-		} catch (err) {
-			toast.error('เกิดบัคแล้วว!!', {
-				position: "bottom-right",
-				theme:'dark',
-				autoClose: false,
-				hideProgressBar: true,
-				closeOnClick: false,
-				pauseOnHover: true,
-				draggable: true,
-				progress: 1,
-			});
-		}
-	  };
-	
+	async function postData(e){
+		e.preventDafault();
+		Axios.post("https://dose.herokuapp.com/api",{
+			name :name,
+			age:age,
+			height:height,
+			weight:weight,
+			descrip :desc
+		})
+		setTimeout(()=>{window.location.reload()},3000)
+
+	}
+
 	function handleClick(){
 		let w50 = document.getElementById('w50');	
 		let change = document.getElementById('change');
-		
 		// add class avtive
 		w50.style.width = '50%';
 		w50.style.transition = 'width 1s';
 		change.style.display = 'none';
 	}
-	
-	
 	return (
-		
 		<div className='Allcr' >
 			<div className="from" data-aos='zoom-out' >
 				<div className="from-title">
@@ -114,7 +88,7 @@ function Create(props) {
 							onChange={(e) => {setDesc(e.target.value)}}
 						/>
 					</div>
-					<button className='btn' onClick={addData}>create</button>
+					<button className='btn' onClick={postData} >create</button>
 				</div>
 				<div className="imgr" id='w50' onClick={handleClick}>
 				</div>

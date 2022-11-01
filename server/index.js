@@ -8,7 +8,6 @@ const path = require('path'); //import ตัวpath
 const MongoClient  = require('mongodb').MongoClient;
 var database; //ค่าฐานข้อมูล
 const Datadase_URI = process.env.MONGODB_URI //import รหัส Database
-const serverless = require('serverless-http')
 
 //นี่คือมิดเดิ้ลแวร์ที่เชื่อม(middle ware)
 app.use(cors());
@@ -53,7 +52,7 @@ app.get('/api',(req,res)=>{
 })
 
 //เลือกอ่านข้อมูล
-app.get('/api/:id',(req,res)=>{
+app.get('/api/:_id',(req,res)=>{
     database.collection('users').findById(req.params.userId).toArray((err,result)=>{
         if (err) throw err
         res.send(result)
@@ -95,5 +94,3 @@ app.put('/api/:id', (req,res)=>{
         }
         )
 }  )
-
-module.exports.handler = serverless(app)
