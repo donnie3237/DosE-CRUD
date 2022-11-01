@@ -6,23 +6,23 @@ import axios from 'axios'
 
 
 function Detail() {
-	const [user, setUser] = useState({});
+	// const [user, setUser] = useState({});
 
-	const { _id } = useParams();
+	// const { _id } = useParams();
 
-	useEffect(
-		function () {
-			async function getCrudById() {
-				try {
-					const response = await axios.get(`https://dose.herokuapp.com/api/${_id}`);
-					setUser(response.data);
-				} catch (error) {
-					console.log("error", error);
-				}
-			}
-			getCrudById();
-		},
-	);
+	// useEffect(
+	// 	function () {
+	// 		async function getCrudById() {
+	// 			try {
+	// 				const response = await axios.get(`https://dose.herokuapp.com/api/${_id}`);
+	// 				setUser(response.data);
+	// 			} catch (error) {
+	// 				console.log("error", error);
+	// 			}
+	// 		}
+	// 		getCrudById();
+	// 	},
+	// );
   return (
     <div className="det" >
             <br />

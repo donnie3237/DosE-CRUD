@@ -16,8 +16,7 @@ AOS.init();
 	const [desc,setDesc]=useState('')
 	console.log(name+age+height+weight+desc)
 
-	async function postData(e){
-		e.preventDafault();
+	async function postData(){
 		Axios.post("https://dose.herokuapp.com/api",{
 			name :name,
 			age:age,
