@@ -6,6 +6,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { response } from 'express';
 AOS.init();
 
  function Create(){
@@ -14,9 +15,8 @@ AOS.init();
 	const [height,setHeight]=useState(0)
 	const [weight,setWeight]=useState(0)
 	const [desc,setDesc]=useState('')
-	console.log(name+age+height+weight+desc)
-
-	async function postData(){
+	console.log('name :'+name,'\n','age:' +age,'\n','height:'+height,'\n','weight:'+weight,'\n','description:'+desc)
+	function postData(){
 		Axios.post("https://dose.herokuapp.com/api",{
 			name :name,
 			age:age,
@@ -24,8 +24,19 @@ AOS.init();
 			weight:weight,
 			descrip :desc
 		})
-		setTimeout(()=>{window.location.reload()},3000)
-
+		toast.success('your data has been created!',{
+			position:"bottom-right"}
+		)
+		document.getElementById('name').value = ''
+		document.getElementById('age').value =''
+		document.getElementById('height').value = ''
+		document.getElementById('weight').value = ''
+		document.getElementById('desc').value = ''
+		setAge(0)
+		setName('')
+		setHeight(0)
+		setWeight(0)
+		setDesc('')
 	}
 
 	function handleClick(){
@@ -65,7 +76,7 @@ AOS.init();
 							<label >Height</label>
 						<input type="number" 
 							placeholder='YourHeight(cm)' 
-							id='weight' 
+							id='height' 
 							onChange={(e) => {setHeight(e.target.value)}}
 						/>
 						</div>
@@ -73,7 +84,7 @@ AOS.init();
 							<label >Weight</label>
 						<input type="number" 
 							placeholder='YourWeight(kg)' 
-							id='height' 
+							id='weight' 
 							onChange={(e) => {setWeight(e.target.value)}}
 							/>
 							
@@ -84,6 +95,7 @@ AOS.init();
 						<textarea placeholder='YourDescription' 
 							rows={5} 
 							name='descrip' 
+							id='desc'
 							onChange={(e) => {setDesc(e.target.value)}}
 						/>
 					</div>

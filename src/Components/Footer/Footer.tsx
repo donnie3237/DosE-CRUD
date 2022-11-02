@@ -10,7 +10,7 @@ function Footer() {
           <img src={logo} alt="" />
         </div>
         <div className="ftop2">
-          <p>Serverhost: 8080</p>
+          <p>Serverhost: <a href='https://dose.herokuapp.com/' target='blank'>https://dose.herokuapp.com/</a></p>
           <p>compass : mongodb+srv://dose:1234@firstdatabase.m0bf5u9.mongodb.net/test</p>
           <p>Email : paradorn3237@gmail.com</p>
           <a href="https://www.facebook.com/profile.php?id=100007215521248">FaceBook</a>
@@ -18,7 +18,6 @@ function Footer() {
           </div>
       </div>
         <p className='footb'>MadeBy:<div className='pink'>Paradorn Lungchoy</div> </p>
-        
     </div>
   )
 }
