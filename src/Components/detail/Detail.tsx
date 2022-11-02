@@ -33,7 +33,7 @@ function Detail() {
 	 <h2><h3>height : </h3><p>{user.height} cm</p></h2>
 	 <h2><h3>weight : </h3><p>{user.weight} kg</p></h2>
 	 <h2><h3>Age : </h3><p>{user.age} years</p></h2>
-	 <h2><h3>DesCription : </h3><p>{user.age}</p></h2>
+	 <h2><h3>DesCription : </h3><p>{user.dascrip}</p></h2>
 
 	 <Link className='close' to='/list'>Close</Link>
 	 </div>
