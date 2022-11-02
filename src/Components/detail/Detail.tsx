@@ -9,7 +9,7 @@ function Detail() {
 	const [user, setUser] = useState({});
 
 	let link = window.location.href
-	let userId = link.replace('http://localhost:3000/#/list/view/','').toString()
+	let userId = link.replace('http://dose-crud.netlify.app/#/list/view/','').toString()
     console.log("userId:"+userId)
 	useEffect(
 		function () {
@@ -17,30 +17,26 @@ function Detail() {
 				try {
 					const response = await axios.get(`https://dose.herokuapp.com/api/${userId}`
 					);
-					setUser(response.data);
+					setUser(response.data[0]);
 				} catch (error) {
 					console.log("error", error);
 				}
 			}
 			getCrudById();
-		},
+		}
 	);
-	console.log(user.name)
+	console.log(user)
   return (
-	<>
-	{user &&
-		user.map((user) => {
-			return (
-				<tr key={user._id}>
-				<td>{user.name}</td>
-				<td>{user.age}</td>
-				</tr>
-				)
-			}
-		)
+	<div className="det">
+		<h1>รายชื่อ</h1>
+	 <h2><h3>Name : </h3><p>{user.name}</p></h2>
+	 <h2><h3>height : </h3><p>{user.height} cm</p></h2>
+	 <h2><h3>weight : </h3><p>{user.weight} kg</p></h2>
+	 <h2><h3>Age : </h3><p>{user.age} years</p></h2>
+	 <h2><h3>DesCription : </h3><p>{user.age}</p></h2>
 
-	</>
-  )
-}
-
+	 <Link className='close' to='/list'>Close</Link>
+	 </div>
+	)
+  }
 export default Detail

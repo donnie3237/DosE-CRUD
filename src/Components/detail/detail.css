@@ -1,13 +1,38 @@
 .det{
-    width: 100vw;
+    width: 80vw;
     background-color: bisque;
-    height: 55vh;
-    padding-left: 10%;
+    min-height: 55vh;
+    height: 600px;
+    padding:0 10vw;
+}
+h1{
+    text-align: center;
+    margin: 0;
+    padding: 20px 0;
+    font-size: 40px;
+    color: rgb(48, 8, 159);
+}
+h2{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+}
+h2 p{
+    color: red;
+    padding-left:5px ;
 }
 .close{
-    padding: 5px 10px;
+    position: absolute;
+    top: 600px;
+    left: 10%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: white;
     border: 1px solid black;
+    width: 80%;
     text-decoration: none;
     color: black;
     font-weight: 700;

@@ -54,10 +54,8 @@ app.get('/api',(req,res)=>{
 
 //เลือกอ่านข้อมูล
 app.get('/api/:id',(req,res)=>{
-    database.collection('users').find({_id : ObjectId(req.params['id'])}).toArray((err,result)=>{
-        if (err) {
-            res.send('Cannot find data!!')
-        }
+    database.collection('users').find({_id : ObjectId(req.params['id'])}).toArray((err,result) => {
+        if(err) throw err
         res.send(result)
         console.log(result)
     })
