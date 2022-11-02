@@ -6,9 +6,10 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    overflow-x: hidden;
 }
 .api1{
-    height: 80vh;
+    height: 100vh;
     background-color: rgb(59, 49, 151);
     width: 100%;
     justify-content: center;

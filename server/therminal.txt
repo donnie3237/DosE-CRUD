@@ -1,0 +1,8 @@
+$ heroku git:clone -a dose 
+$ cd dose
+
+
+
+$ git add .
+$ git commit -am "make it better"
+$ git push heroku master

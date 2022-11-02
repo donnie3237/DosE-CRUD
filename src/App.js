@@ -46,7 +46,7 @@ function App() {
             <Route  path='/api' element={<ApiPage/>}></Route>
             <Route  path='/data' element={<DataPage/>}></Route>
             <Route  path='/create/success' element={<Err/>}></Route>
-            <Route  path='/list/view/' element={<Detail/>}></Route>
+            <Route  path='/list/view/:id' element={<Detail/>}></Route>
             <Route  path='/list/edit/' element={<Edit/>}></Route>
             <Route  path='/list/delete/' element={<Err/>}></Route>
           </Routes>

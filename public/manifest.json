@@ -1,6 +1,6 @@
 {
   "short_name": "DataDOSE",
-  "name": "dose App to Manage Data",
+  "name": "DOSE-CRUD-APP",
   "icons": [
     {
       "src": "./logo.png",

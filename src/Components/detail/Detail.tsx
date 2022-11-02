@@ -6,46 +6,40 @@ import axios from 'axios'
 
 
 function Detail() {
-	// const [user, setUser] = useState({});
+	const [user, setUser] = useState({});
 
-	// const { _id } = useParams();
-
-	// useEffect(
-	// 	function () {
-	// 		async function getCrudById() {
-	// 			try {
-	// 				const response = await axios.get(`https://dose.herokuapp.com/api/${_id}`);
-	// 				setUser(response.data);
-	// 			} catch (error) {
-	// 				console.log("error", error);
-	// 			}
-	// 		}
-	// 		getCrudById();
-	// 	},
-	// );
+	let link = window.location.href
+	let userId = link.replace('http://localhost:3000/#/list/view/','').toString()
+    console.log("userId:"+userId)
+	useEffect(
+		function () {
+			async function getCrudById() {
+				try {
+					const response = await axios.get(`https://dose.herokuapp.com/api/${userId}`
+					);
+					setUser(response.data);
+				} catch (error) {
+					console.log("error", error);
+				}
+			}
+			getCrudById();
+		},
+	);
+	console.log(user.name)
   return (
-    <div className="det" >
-            <br />
-			<h2>Name: {user.name}</h2>
+	<>
+	{user &&
+		user.map((user) => {
+			return (
+				<tr key={user._id}>
+				<td>{user.name}</td>
+				<td>{user.age}</td>
+				</tr>
+				)
+			}
+		)
 
-			<p>
-				<b>Age</b>: {user.age}
-			</p>
-
-			<p>
-				<b>Height</b>: {user.height}
-			</p>
-			<p>
-				<b>Weight</b>: {user.weight}
-			</p>
-			<p>
-                <b>Description</b>: {user.descrip}
-            </p>
-			
-            <Link to="/list" className="close">
-                Close
-            </Link>
-        </div>
+	</>
   )
 }
 

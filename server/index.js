@@ -5,6 +5,7 @@ const app = express(); //ใช้ฟงก์ชั่น express
 const PORT = process.env.PORT || 8080 ; //กำหนดพอร์ทจากไฟล์.env และเขียนสด
 const cors = require('cors') //import cors มิดเดิ้ลแวร์
 const path = require('path'); //import ตัวpath
+const { ObjectID, ObjectId } = require('bson');
 const MongoClient  = require('mongodb').MongoClient;
 var database; //ค่าฐานข้อมูล
 const Datadase_URI = process.env.MONGODB_URI //import รหัส Database
@@ -52,13 +53,15 @@ app.get('/api',(req,res)=>{
 })
 
 //เลือกอ่านข้อมูล
-app.get('/api/:_id',(req,res)=>{
-    database.collection('users').findById(req.params.userId).toArray((err,result)=>{
-        if (err) throw err
+app.get('/api/:id',(req,res)=>{
+    database.collection('users').find({_id : ObjectId(req.params['id'])}).toArray((err,result)=>{
+        if (err) {
+            res.send('Cannot find data!!')
+        }
         res.send(result)
+        console.log(result)
     })
 })
-
 //เพิ่มข้อมูล
 app.post('/api', (req,res)=>{
     var user = {

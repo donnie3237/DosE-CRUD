@@ -14,7 +14,7 @@ function Footer() {
           <p>compass : mongodb+srv://dose:1234@firstdatabase.m0bf5u9.mongodb.net/test</p>
           <p>Email : paradorn3237@gmail.com</p>
           <a href="https://www.facebook.com/profile.php?id=100007215521248">FaceBook</a>
-          <a href="https://twitter.com/Ksfdd1">TwitTer</a>
+          <a href="https://twitter.com/Ksfdd1" target='blank'>TwitTer</a>
           </div>
       </div>
         <p className='footb'>MadeBy:<div className='pink'>Paradorn Lungchoy</div> </p>
