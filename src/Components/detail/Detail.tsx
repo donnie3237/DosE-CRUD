@@ -9,7 +9,7 @@ function Detail() {
 	const [user, setUser] = useState({});
 
 	let link = window.location.href
-	let userId = link.replace('http://dose-crud.netlify.app/#/list/view/','').toString()
+	let userId = link.replace('https://dose-crud.netlify.app/#/list/view/','').toString()
     console.log("userId:"+userId)
 	useEffect(
 		function () {
