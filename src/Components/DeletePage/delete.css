@@ -3,6 +3,8 @@
     height: 600px;
     background-color: rgb(161, 92, 92);
     position: relative;
+    width: 100vw;
+    overflow-x: hidden;
 }
 .deletePage .flex{
     display: flex;
