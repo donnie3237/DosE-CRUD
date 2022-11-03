@@ -35,6 +35,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 .Red{
     background-color: red;
@@ -72,7 +73,9 @@
 .sure .yes{
     background-color: red;
     color: white;
+    cursor: pointer;
 }
 .sure .no{
     background-color: white;
+    cursor: pointer;
 }
