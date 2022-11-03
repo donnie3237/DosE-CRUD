@@ -35,7 +35,7 @@ function DeletePage() {
 		try {
 			await axios.delete(`https://dose.herokuapp.com/api/${userId}`);
             console.log('deleted')
-            toast.success('your data has been deleted!',{
+            toast.warning(`${user.name} has been deleted!`,{
                 position:"bottom-right"}
             )
 			navigate("/list");
@@ -74,6 +74,15 @@ function DeletePage() {
                 <a  className='no' id='exit' onClick={Nope}>No</a>
             </div>
         </div>
+        <ToastContainer
+				position="bottom-right"
+				autoClose={false}
+				newestOnTop={false}
+				closeOnClick={false}
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+			/>
     </div>
     
   )
