@@ -47,7 +47,7 @@ function App() {
             <Route  path='/list/view/:id' element={<Detail/>}></Route>
             <Route  path='/list/edit/' element={<Edit/>}></Route>
             <Route  path='/list/delete/:id' element={<DeletePage/>}></Route>
-          </Routes>'
+          </Routes>
         <Footer />
       </Router>
       }
