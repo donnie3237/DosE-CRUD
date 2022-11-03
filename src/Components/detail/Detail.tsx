@@ -7,7 +7,11 @@ import axios from 'axios'
 
 function Detail() {
 	const [user, setUser] = useState({});
-
+	const [name,setName] = useState('')
+	const [age,setAge]= useState(0)
+	const [height,setHeight]=useState(0)
+	const [weight,setWeight]=useState(0)
+	const [desc,setDesc]=useState('')
 	let link = window.location.href
 	let userId = link.replace('https://dose-crud.netlify.app/#/list/view/','').toString()
     console.log("userId:"+userId)

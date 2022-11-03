@@ -6,7 +6,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { response } from 'express';
 AOS.init();
 
  function Create(){

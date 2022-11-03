@@ -86,7 +86,7 @@ app.delete('/api/:id',(req,res)=>{
 
 //อัพเดทข้อมูล
 app.put('/api/:id', (req,res)=>{
-    database.collection('users').findOneAndUpdate({_id:req.params.userId},
+    database.collection('users').findOneAndUpdate({_id:req.params['id']},
         (err,result)=>{
             if (err){
                 res.send('I cannot Update bacause :'+ err)
