@@ -9,11 +9,10 @@ import Vdata from './Components/vdata/Vdata.tsx';
 import Create from './Components/Create/Create.tsx';
 import ApiPage from './Components/ApiPage/ApiPage.tsx';
 import DataPage from './Components/DataPage/DataPage.tsx';
-import Err from './Components/errpage/Err.tsx';
 import HashLoader from 'react-spinners/HashLoader';
 import Detail from './Components/detail/Detail.tsx';
 import Edit from './Components/Edit/Edit.tsx';
-
+import DeletePage from './Components/DeletePage/DeletePage.tsx';
 
 function App() {
   const [loading, setLoading] = useState(false)
@@ -45,11 +44,10 @@ function App() {
             <Route  path='/list' element={<Vdata/>}></Route>
             <Route  path='/api' element={<ApiPage/>}></Route>
             <Route  path='/data' element={<DataPage/>}></Route>
-            <Route  path='/create/success' element={<Err/>}></Route>
             <Route  path='/list/view/:id' element={<Detail/>}></Route>
             <Route  path='/list/edit/' element={<Edit/>}></Route>
-            <Route  path='/list/delete/' element={<Err/>}></Route>
-          </Routes>
+            <Route  path='/list/delete/:id' element={<DeletePage/>}></Route>
+          </Routes>'
         <Footer />
       </Router>
       }

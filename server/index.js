@@ -76,7 +76,7 @@ app.post('/api', (req,res)=>{
 
 //ลบข้อมูล
 app.delete('/api/:id',(req,res)=>{
-    database.collection('users').deleteOne({_id: req.params.userId},(err,result)=>{
+    database.collection('users').deleteOne({_id : ObjectId(req.params['id'])},(err,result)=>{
         if (err){
             res.send('Delete Eror :'+err)
         }
