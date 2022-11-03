@@ -4,7 +4,7 @@ import { useState ,useEffect } from 'react'
 import axios from 'axios'
 import './delete.css'
 import { ToastContainer, toast } from 'react-toastify';
-
+import 'react-toastify/dist/ReactToastify.css';
 
 function DeletePage() {
     const navigate = useNavigate();
@@ -35,7 +35,7 @@ function DeletePage() {
 		try {
 			await axios.delete(`https://dose.herokuapp.com/api/${userId}`);
             console.log('deleted')
-            toast.warning(`${user.name} has been deleted!`,{
+            toast.warn(`${user.name} has been deleted!`,{
                 position:"bottom-right"}
             )
 			navigate("/list");
