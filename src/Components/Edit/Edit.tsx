@@ -1,6 +1,6 @@
 import React from 'react'
 import './edir.css'
-import {Link,useNavigate} from 'react-router-dom'
+import {NavLink,useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
@@ -69,7 +69,7 @@ function Edit() {
             <textarea id='desc' rows="5" placeholder='New Description' value={user.descrip} onChange={(e) => {setDesc(e.target.value)}}></textarea>
             <div className="btng">
                 <button className='editt' onClick={updateData}>Edit</button>
-                <Link to='/list' className='etli'>Close</Link>
+                <NavLink to='/list' className='etli'>Close</NavLink>
                 
             </div>
         </div>

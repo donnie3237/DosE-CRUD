@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link , useParams, useNavigate} from 'react-router-dom'
+import {NavLink , useNavigate} from 'react-router-dom'
 import { useState ,useEffect } from 'react'
 import axios from 'axios'
 import './delete.css'
@@ -65,7 +65,7 @@ function DeletePage() {
         <h2>DesCription : <p>{user.descrip}</p></h2>
         <div className="botton">
             <a className='Red' id='Delete' onClick={Delete}>Delete</a>
-            <Link to='/list' className='White'>Back</Link>
+            <NavLink to='/list' className='White'>Back</NavLink>
         </div>
         <div className="confrim" id='ConFrim'>
             <p>Are you Sure To delete!!</p>

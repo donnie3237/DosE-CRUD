@@ -2,7 +2,7 @@ import React from 'react'
 import './main.css'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 AOS.init();
 
@@ -65,7 +65,7 @@ function Main() {
                       <div className="g2-text">
                         <p>connect to server</p>
                         <p>การเชื่อมต่อกับserver</p>
-                        <Link to='/api'>Axios</Link>
+                        <NavLink to='/api'>Axios</NavLink>
                       </div>
                     </div>
                     <div className="g g3" data-aos='fade-left'>
@@ -92,7 +92,7 @@ function Main() {
                       <div className="g5-text">
                         <p>security .env and vpn for U.</p>
                         <p>ระบบความปลอดภัยเล็กน้อย .env และ Vpn สำหรับคุณ</p>
-                        <Link to='/data'>.env</Link>
+                        <NavLink to='/data'>.env</NavLink>
                         <a href="https://openvpn.net/" target='blank'>Vpn</a>
                       </div>
                     </div>
@@ -101,7 +101,7 @@ function Main() {
                       <div className="g6-text">
                         <p>connect database and how database work</p>
                         <p>มาทำความเข้าใจฐานข้อมูล</p>
-                        <Link to='/data'>MongoDB</Link>
+                        <NavLink to='/data'>MongoDB</NavLink>
                       </div>
                     </div>
               </div>              
