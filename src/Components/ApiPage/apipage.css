@@ -73,6 +73,7 @@
     }
     .Allapi div img{
         width: 70%;
+        max-width: 200px;
         margin: 0;
     }
     .Allapi div p{
