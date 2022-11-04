@@ -190,7 +190,7 @@
     }
     .text{
         width: 100%;
-        height: 70%;
+        height: 50%;
         font-size: 14px;
         position: absolute;
         margin: 0 auto;
@@ -198,8 +198,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
-    .text a{margin: 0;}
+    .text a{
+        margin: 0;
+        height: 20%;
+    }
+    .text p{
+        height: 80%;
+    }
 }
 .text a{
     text-decoration: none;
