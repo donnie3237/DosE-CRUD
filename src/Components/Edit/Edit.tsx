@@ -34,7 +34,7 @@ function Edit() {
 			getCrudById();
 		}
 	);
-   function updateData(){
+   async function updateData(){
 
     
 		axios.post("https://dose.herokuapp.com/api",{
