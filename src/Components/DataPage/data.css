@@ -189,12 +189,12 @@
         margin-left: 0;
     }
     .text{
-        width: 100%;
+        width: 70%;
         height: 50%;
         font-size: 14px;
         position: absolute;
         margin: 0 auto;
-        top: 50%;
+        top: 30%;
         display: flex;
         flex-direction: column;
         align-items: center;
