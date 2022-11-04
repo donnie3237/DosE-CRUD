@@ -49,16 +49,24 @@ function Edit() {
 			position:"bottom-right"}
 		)
 	}
-
+  useEffect(
+    function(){
+      setName(document.getElementById('name').value)
+      setAge(document.getElementById('age').value)
+      setHeight(document.getElementById('height').value)
+      setWeight(document.getElementById('weight').value)
+      setDesc(document.getElementById('desc').value)
+    }
+  )
   return (
     <div className="edit">
       <h1>Edit Data!!</h1>
         <div className="myfrom">
-            <input type="text" placeholder='New name'  defaultValue={user.name} onChange={(e) => {setName(e.target.value)}} />
-            <input type="number" placeholder='New age' defaultValue={user.age}  onChange={(e) => {setAge(e.target.value)}}/>
-            <input type="number" placeholder='New height' defaultValue={user.height} onChange={(e) => {setHeight(e.target.value)}}/>
-            <input type="number" placeholder='New weight' defaultValue={user.weight} onChange={(e) => {setWeight(e.target.value)}}/>
-            <textarea  rows="5" placeholder='New Description' value={user.descrip} onChange={(e) => {setDesc(e.target.value)}}></textarea>
+            <input id='name' type="text" placeholder='New name'  defaultValue={user.name} onChange={(e) => {setName(e.target.value)}} />
+            <input id='age' type="number" placeholder='New age' defaultValue={user.age}  onChange={(e) => {setAge(e.target.value)}}/>
+            <input id='height' type="number" placeholder='New height' defaultValue={user.height} onChange={(e) => {setHeight(e.target.value)}}/>
+            <input id='weight' type="number" placeholder='New weight' defaultValue={user.weight} onChange={(e) => {setWeight(e.target.value)}}/>
+            <textarea id='desc' rows="5" placeholder='New Description' value={user.descrip} onChange={(e) => {setDesc(e.target.value)}}></textarea>
             <div className="btng">
                 <button className='editt' onClick={updateData}>Edit</button>
                 <Link to='/list' className='etli'>Close</Link>
