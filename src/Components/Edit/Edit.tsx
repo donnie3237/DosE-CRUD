@@ -67,7 +67,7 @@ function Edit() {
             <input id='age' type="number" placeholder='New age' defaultValue={user.age}  onChange={(e) => {setAge(e.target.value)}}/>
             <input id='height' type="number" placeholder='New height' defaultValue={user.height} onChange={(e) => {setHeight(e.target.value)}}/>
             <input id='weight' type="number" placeholder='New weight' defaultValue={user.weight} onChange={(e) => {setWeight(e.target.value)}}/>
-            <textarea id='desc' rows="5" placeholder='New Description' defaultvalue={user.descrip} onChange={(e) => {setDesc(e.target.value)}}></textarea>
+            <textarea id='desc' rows="5" placeholder='New Description' defaultValue={user.descrip} onChange={(e) => {setDesc(e.target.value)}}></textarea>
             <div className="btng">
                 <button className='editt' onClick={updateData}>Edit</button>
                 <NavLink to='/list' className='etli'>Close</NavLink>
