@@ -9,9 +9,9 @@
     overflow-x: hidden;
 }
 .api1{
-    height: 100vh;
+    height: 80vh;
     background-color: rgb(59, 49, 151);
-    width: 100%;
+    width: 100vw;
     justify-content: center;
     display: flex;
     align-items: center;
@@ -61,6 +61,28 @@
 .textt a:hover{
     background-color: white;
     color: black;
+    box-shadow: 0 0 10px white;
     transition: all 0.7s;
-    border-radius: 5px;
+}
+@media screen and (max-width:700px){
+    .Allapi div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .Allapi div img{
+        width: 70%;
+        margin: 0;
+    }
+    .Allapi div p{
+        text-align: center;
+        margin:  10px 5%;
+        
+    }
+    .Allapi div a{
+        width: 60%;
+        margin: 10px auto;
+        text-align: center;
+    }
 }
