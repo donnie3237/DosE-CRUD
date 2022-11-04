@@ -11,7 +11,7 @@ function Edit() {
   const [user, setUser] = useState({});
   const navigate =useNavigate()
 	let link = window.location.href
-	let userId = link.replace('http://localhost:3000/#/list/edit/','').toString()
+	let userId = link.replace('https://dose-crud.netlify.app/#/list/edit/','').toString()
     // console.log("userId:"+userId)
     // console.log(user)
   const [name,setName] = useState('')
