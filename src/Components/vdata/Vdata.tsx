@@ -3,6 +3,7 @@ import axios from "axios";
 import { NavLink } from "react-router-dom";
 import './data.css'
 import AOS from 'aos'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 AOS.init();
@@ -58,6 +59,15 @@ function Vdata() {
 				</tbody>
 				</table>
 				<br/>
+				<ToastContainer
+				position="bottom-right"
+				autoClose={false}
+				newestOnTop={false}
+				closeOnClick={false}
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+		/>
 			</div>
 	)
 	};
