@@ -23,7 +23,7 @@ AOS.init();
 			weight:weight,
 			descrip :desc
 		})
-		toast.success('your data has been created!',{
+		toast.success(`${name} has been created!`,{
 			position:"bottom-right"}
 		)
 		document.getElementById('name').value = ''

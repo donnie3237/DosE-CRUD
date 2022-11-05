@@ -44,7 +44,7 @@ function Edit() {
 		})
      	axios.delete(`https://dose.herokuapp.com/api/${userId}`)
     	navigate("/list");
-		toast.success('your data has been updated!',{
+		toast.success(`${user.name} has been updated!`,{
 			position:"bottom-right"}
 		)
 	}
