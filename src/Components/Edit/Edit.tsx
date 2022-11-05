@@ -34,9 +34,7 @@ function Edit() {
 			getCrudById();
 		}
 	);
-   async function updateData(){
-
-    
+	function updateData(){
 		axios.post("https://dose.herokuapp.com/api",{
 			name :name,
 			age:age,
@@ -45,7 +43,7 @@ function Edit() {
 			descrip :desc
 		})
      	axios.delete(`https://dose.herokuapp.com/api/${userId}`)
-    navigate("/list");
+    	navigate("/list");
 		toast.success('your data has been updated!',{
 			position:"bottom-right"}
 		)
