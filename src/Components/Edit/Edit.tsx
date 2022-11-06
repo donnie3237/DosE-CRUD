@@ -34,7 +34,7 @@ function Edit() {
 			getCrudById();
 		}
 	);
-	async function updateData(){
+	function updateData(){
 		
      	axios.delete(`https://dose.herokuapp.com/api/${userId}`)
     	navigate("/list");
@@ -47,7 +47,7 @@ function Edit() {
 			weight:weight,
 			descrip :desc
 		})
-		await toast.success(`${user.name} has been updated!`,{
+		toast.success(`${user.name} has been updated!`,{
 			position:"bottom-right"}
 		)
 		}
