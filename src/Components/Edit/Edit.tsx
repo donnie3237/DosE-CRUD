@@ -36,18 +36,18 @@ function Edit() {
 	);
 	async function updateData(){
 		
-		axios.delete(`https://dose.herokuapp.com/api/${userId}`)
+     	axios.delete(`https://dose.herokuapp.com/api/${userId}`)
     	navigate("/list");
+		
 		 
-		 await axios.post("https://dose.herokuapp.com/api",{
+		axios.post("https://dose.herokuapp.com/api",{
 			name :name,
 			age:age,
 			height:height,
 			weight:weight,
 			descrip :desc
 		})
-		await window.location.reload()
-		toast.success(`${user.name} has been updated!`,{
+		await toast.success(`${user.name} has been updated!`,{
 			position:"bottom-right"}
 		)
 		}
