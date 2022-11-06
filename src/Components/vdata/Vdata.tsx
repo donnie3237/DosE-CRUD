@@ -36,7 +36,7 @@ function Vdata() {
 					{user &&
 						user.map((user) => {
 							return (
-								<tr key={user._id}>
+								<tr key={user._id.reverse()}>
 									
 									<td>{user.name}</td>
 									<td>{user.age}</td>
