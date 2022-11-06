@@ -35,19 +35,21 @@ function Edit() {
 		}
 	);
 	async function updateData(){
-		axios.post("https://dose.herokuapp.com/api",{
+		
+		axios.delete(`https://dose.herokuapp.com/api/${userId}`)
+    	navigate("/list");
+		toast.success(`${user.name} has been updated!`,{
+			position:"bottom-right"}
+		)
+		 
+		 await axios.post("https://dose.herokuapp.com/api",{
 			name :name,
 			age:age,
 			height:height,
 			weight:weight,
 			descrip :desc
 		})
-     	await axios.delete(`https://dose.herokuapp.com/api/${userId}`)
-    	navigate("/list");
-		toast.success(`${user.name} has been updated!`,{
-			position:"bottom-right"}
-		)
-	}
+		}
   useEffect(
     function(){
       setName(document.getElementById('name').value)
