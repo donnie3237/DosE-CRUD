@@ -42,7 +42,7 @@ function Edit() {
 			weight:weight,
 			descrip :desc
 		})
-     	axios.delete(`https://dose.herokuapp.com/api/${userId}`)
+     	await axios.delete(`https://dose.herokuapp.com/api/${userId}`)
     	navigate("/list");
 		toast.success(`${user.name} has been updated!`,{
 			position:"bottom-right"}
