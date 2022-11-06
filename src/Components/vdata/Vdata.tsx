@@ -68,7 +68,7 @@ function Vdata() {
 				rtl={false}
 				pauseOnFocusLoss
 				draggable
-		/>
+				/>
 			</div>
 	)
 	};
