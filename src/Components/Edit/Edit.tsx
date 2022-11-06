@@ -49,6 +49,7 @@ function Edit() {
 			weight:weight,
 			descrip :desc
 		})
+		await window.location.reload()
 		}
   useEffect(
     function(){
