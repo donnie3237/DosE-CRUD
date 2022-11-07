@@ -45,8 +45,7 @@ function Edit() {
 		toast.success(`${name} has been Updated!`,{
 			position:"bottom-right"}
 		)
-        navigate('/list') 
-		window.location.reload()      
+        navigate('/list')  
 	}
   useEffect(
     function(){
