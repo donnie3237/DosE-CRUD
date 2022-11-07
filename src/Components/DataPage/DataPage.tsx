@@ -46,7 +46,7 @@ function DataPage() {
             <div className="JSONdata">
               <div className="image">
                 <img src={require('./img/json.png')} alt=""/>
-                </div>
+              </div>
               <div className="text">
                 <p>JSON คือ รูปแบบของ javascript objectใช้สำหรับเเลกเปลี่ยนข้อมูล กับภาษาอื่นๆได้ เช่น PHP C#... โดยมีการเข้ารหัสและถอดรหัส เพื่ออ่านค่าข้อมูล
                   และ ผมใช้ JSON  สำหรับเก็บข้อมูลใน MongoDB

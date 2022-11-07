@@ -47,7 +47,7 @@ function Edit() {
 			weight:weight,
 			descrip :desc
 		})
-		 toast.success(`${user.name} has been updated!`,{
+		toast.success(`${user.name} has been updated!`,{
 			position:"bottom-right"}
 		)
 		}
