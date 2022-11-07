@@ -34,21 +34,25 @@ function Edit() {
 			getCrudById();
 		}
 	);
-	function updateData(){
-		axios.put(`https://dose.herokuapp.com/api/${userId}`,{
+	async function updateData() {
+		try {
+			axios.put(`https://dose.herokuapp.com/api/${userId}`,{
 			name :name,
 			age:age,
 			height:height,
 			weight:weight,
 			descrip :desc
 		})
-		// navigate("/list");
-		toast.success(`${user.name} has been updated!`,{
-			position:"bottom-right"}
-		)
-    	
-		
+            console.log('Updateted')
+            toast.success(`${user.name} has been Updated!`,{
+                position:"bottom-right"}
+            )
+			navigate("/list");
+		} catch (error) {
+			console.error(error);
 		}
+        
+	}
   useEffect(
     function(){
       setName(document.getElementById('name').value)
