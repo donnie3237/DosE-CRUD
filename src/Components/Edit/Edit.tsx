@@ -34,15 +34,15 @@ function Edit() {
 			getCrudById();
 		}
 	);
-	function updateData(){
-		axios.put(`https://dose.herokuapp.com/api/${userId}`,{
+	async function updateData(){
+		await axios.put(`https://dose.herokuapp.com/api/${userId}`,{
 			name :name,
 			age:age,
 			height:height,
 			weight:weight,
 			descrip :desc
 		})
-		toast.success(`${user.name} has been updated!`,{
+		await toast.success(`${user.name} has been updated!`,{
 			position:"bottom-right"}
 		)
     	navigate("/list");
