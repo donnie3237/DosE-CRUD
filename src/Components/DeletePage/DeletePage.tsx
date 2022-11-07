@@ -34,11 +34,11 @@ function DeletePage() {
     async function useDelete() {
 		try {
 			await axios.delete(`https://dose.herokuapp.com/api/${userId}`);
-            console.log('deleted')
+            
+			navigate("/list");
             toast.warn(`${user.name} has been deleted!`,{
                 position:"bottom-right"}
             )
-			navigate("/list");
 		} catch (error) {
 			console.error(error);
 		}

@@ -42,8 +42,10 @@ function Edit() {
 			weight:weight,
 			descrip :desc
 		})
-		alert(`${name} has been Updated!`)
+		
+		// alert(`${name} has been Updated!`)
         navigate('/list')  
+		toast.success("this data has been Updated!")
 	}
   useEffect(
     function(){
