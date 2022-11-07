@@ -34,8 +34,8 @@ function Edit() {
 			getCrudById();
 		}
 	);
-	async function updateData() {
-		await axios.put(`https://dose.herokuapp.com/api/${userId}`,{
+	function updateData() {
+		axios.put(`https://dose.herokuapp.com/api/${userId}`,{
 			name :name,
 			age:age,
 			height:height,
