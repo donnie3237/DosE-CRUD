@@ -42,10 +42,10 @@ function Edit() {
 			weight:weight,
 			descrip :desc
 		})
-		await toast.success(`${user.name} has been updated!`,{
+		toast.success(`${user.name} has been updated!`,{
 			position:"bottom-right"}
 		)
-    	await navigate("/list");
+    	navigate("/list");
 		
 		}
   useEffect(
