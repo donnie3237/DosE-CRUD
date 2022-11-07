@@ -35,7 +35,7 @@ function Edit() {
 		}
 	);
 	async function updateData(){
-		await axios.put(`https://dose.herokuapp.com/api/${userId}`,{
+		axios.put(`https://dose.herokuapp.com/api/${userId}`,{
 			name :name,
 			age:age,
 			height:height,
