@@ -86,12 +86,14 @@ app.delete('/api/:id',(req,res)=>{
 
 //อัพเดทข้อมูล
 app.put('/api/:id', (req,res)=>{
-    database.collection('users').findOneAndUpdate({_id:req.params['id']},
-        (err,result)=>{
-            if (err){
-                res.send('I cannot Update bacause :'+ err)
-            }
-            res.send({message: 'Udated!'})
-        }
-        )
-}  )
+    var user = {
+        "name":req.body.name,
+        "age":req.body.age,
+        "height":req.body.height,
+        "weight":req.body.weight,
+        "descrip":req.body.descrip
+    }
+    database.collection('users').findOneAndUpdate({_id : ObjectId(req.params['id'])},
+        {$set:{user}})
+}
+)
