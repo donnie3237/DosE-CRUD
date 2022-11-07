@@ -7,9 +7,9 @@ import axios from 'axios';
 import { useEffect , useState} from 'react';
 
 function Edit() {
-    
+	var navigate =useNavigate()
   const [user, setUser] = useState({});
-  const navigate =useNavigate()
+  
 	let link = window.location.href
 	let userId = link.replace('https://dose-crud.netlify.app/#/list/edit/','').toString()
     // console.log("userId:"+userId)
@@ -23,6 +23,7 @@ function Edit() {
 	useEffect(
 		function () {
 			async function getCrudById() {
+				
 				try {
 					const response = await axios.get(`https://dose.herokuapp.com/api/${userId}`
 					);
@@ -35,6 +36,7 @@ function Edit() {
 		}
 	);
 	async function updateData() {
+		
 		try {
 			axios.put(`https://dose.herokuapp.com/api/${userId}`,{
 			name :name,
@@ -43,7 +45,6 @@ function Edit() {
 			weight:weight,
 			descrip :desc
 		})
-            console.log('Updateted')
             toast.success(`${user.name} has been Updated!`,{
                 position:"bottom-right"}
             )
