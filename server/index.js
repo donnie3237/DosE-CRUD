@@ -86,14 +86,14 @@ app.delete('/api/:id',(req,res)=>{
 
 //อัพเดทข้อมูล
 app.put('/api/:id', (req,res)=>{
-    var user = {
+    const user = {
         "name":req.body.name,
         "age":req.body.age,
         "height":req.body.height,
         "weight":req.body.weight,
         "descrip":req.body.descrip
     }
-    database.collection('users').findOneAndUpdate({_id : ObjectId(req.params['id'])},
-        {$set:{user}})
+    database.collection('users').updateOne({_id : ObjectId(req.params['id'])},
+        {$set:user})
 }
 )
