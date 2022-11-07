@@ -42,9 +42,7 @@ function Edit() {
 			weight:weight,
 			descrip :desc
 		})
-		toast.success(`${name} has been Updated!`,{
-			position:"bottom-right"}
-		)
+		alert(`${name} has been Updated!`)
         navigate('/list')  
 	}
   useEffect(
