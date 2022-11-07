@@ -35,18 +35,14 @@ function Edit() {
 		}
 	);
 	async function updateData(){
-		
-     	axios.delete(`https://dose.herokuapp.com/api/${userId}`)
-    	navigate("/list");
-		
-		 
-		await axios.post("https://dose.herokuapp.com/api",{
+		axios.put(`https://dose.herokuapp.com/api/${userId}`,{
 			name :name,
 			age:age,
 			height:height,
 			weight:weight,
 			descrip :desc
 		})
+    	navigate("/list");
 		toast.success(`${user.name} has been updated!`,{
 			position:"bottom-right"}
 		)
