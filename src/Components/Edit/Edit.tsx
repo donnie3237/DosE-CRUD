@@ -45,7 +45,7 @@ function Edit() {
 		await toast.success(`${user.name} has been updated!`,{
 			position:"bottom-right"}
 		)
-    	navigate("/list");
+    	await navigate("/list");
 		
 		}
   useEffect(
