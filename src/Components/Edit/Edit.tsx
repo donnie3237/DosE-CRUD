@@ -45,9 +45,7 @@ function Edit() {
 					});
             
 			navigate("/list");
-            toast.success(`Your data has been deleted please reload!`,{
-                position:"bottom-right"}
-            )
+            alert(`${name} has been Updated! please relode Page :)`)
 		} catch (error) {
 			console.error(error);
 		}
