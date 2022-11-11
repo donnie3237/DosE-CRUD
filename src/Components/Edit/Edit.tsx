@@ -34,19 +34,38 @@ function Edit() {
 			getCrudById();
 		}
 	);
-	function updateData() {
-		axios.put(`https://dose.herokuapp.com/api/${userId}`,{
-			name :name,
-			age:age,
-			height:height,
-			weight:weight,
-			descrip :desc
-		})
-		
-		// alert(`${name} has been Updated!`)
-        navigate('/list')  
-		toast.success("this data has been Updated!")
+	async function updateData() {
+		try {
+			axios.put(`https://dose.herokuapp.com/api/${userId}`,{
+						name :name,
+						age:age,
+						height:height,
+						weight:weight,
+						descrip :desc
+					});
+            
+			navigate("/list");
+            toast.success(`Your data has been deleted please reload!`,{
+                position:"bottom-right"}
+            )
+		} catch (error) {
+			console.error(error);
+		}
+        
 	}
+	// function updateData() {
+	// 	axios.put(`https://dose.herokuapp.com/api/${userId}`,{
+	// 		name :name,
+	// 		age:age,
+	// 		height:height,
+	// 		weight:weight,
+	// 		descrip :desc
+	// 	})
+		
+	// 	// alert(`${name} has been Updated!`)
+    //     navigate('/list')  
+	// 	toast.success("this data has been Updated!")
+	// }
   useEffect(
     function(){
       setName(document.getElementById('name').value)
