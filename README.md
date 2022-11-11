@@ -15,3 +15,6 @@
 <h2>Status</h2>
 <p>สำเร็จแล้ว 50%</p>
 <a href="https://drive.google.com/file/d/1THGRZ5eTVcDScKd6lrnv5S1uU5O9norn/view?fbclid=IwAR26xXk4YzVQ7eghxu_IKTKMRQSdHIICx_DaNTebRS568dtDj2XGAdd0kG0">Crud-Mern-Demo</a>
+<br/>
+<a href="https://dose.herokuapp.com/?fbclid=IwAR0IaSjCE597NzwlfPXsUSMXL5z6l8tKCZRhs_O_jbSnQcKld2bow0sDkLA">Server</a>
+<a href="https://dose-crud.netlify.app/">WEbSite</a>
