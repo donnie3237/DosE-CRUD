@@ -7,19 +7,15 @@ import axios from 'axios';
 import { useEffect , useState} from 'react';
 
 function Edit() {
-    
   const [user, setUser] = useState({});
   const navigate =useNavigate()
 	let link = window.location.href
 	let userId = link.replace('https://dose-crud.netlify.app/#/list/edit/','').toString()
-    // console.log("userId:"+userId)
-    // console.log(user)
-  const [name,setName] = useState('')
+  	const [name,setName] = useState('')
 	const [age,setAge]= useState(0)
 	const [height,setHeight]=useState(0)
 	const [weight,setWeight]=useState(0)
 	const [desc,setDesc]=useState('')
-  console.log('name :'+name,'\n','age:' +age,'\n','height:'+height,'\n','weight:'+weight,'\n','description:'+desc)
 	useEffect(
 		function () {
 			async function getCrudById() {
@@ -43,7 +39,6 @@ function Edit() {
 						weight:weight,
 						descrip :desc
 					});
-            
 			navigate("/list");
             alert(`${name} has been Updated! please relode Page :)`)
 		} catch (error) {
@@ -51,19 +46,6 @@ function Edit() {
 		}
         
 	}
-	// function updateData() {
-	// 	axios.put(`https://dose.herokuapp.com/api/${userId}`,{
-	// 		name :name,
-	// 		age:age,
-	// 		height:height,
-	// 		weight:weight,
-	// 		descrip :desc
-	// 	})
-		
-	// 	// alert(`${name} has been Updated!`)
-    //     navigate('/list')  
-	// 	toast.success("this data has been Updated!")
-	// }
   useEffect(
     function(){
       setName(document.getElementById('name').value)

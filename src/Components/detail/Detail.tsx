@@ -4,10 +4,8 @@ import './detail.css'
 import { useState ,useEffect } from 'react'
 import axios from 'axios'
 
-
 function Detail() {
 	const [user, setUser] = useState({});
-	
 	let link = window.location.href
 	let userId = link.replace('https://dose-crud.netlify.app/#/list/view/','').toString()
     console.log("userId:"+userId)
@@ -34,7 +32,6 @@ function Detail() {
 	 <h2><h3>weight : </h3><p>{user.weight} kg</p></h2>
 	 <h2><h3>Age : </h3><p>{user.age} years</p></h2>
 	 <h2><h3>DesCription : </h3><p>{user.descrip}</p></h2>
-
 	 <NavLink className='close' to='/list'>Close</NavLink>
 	 </div>
 	)
