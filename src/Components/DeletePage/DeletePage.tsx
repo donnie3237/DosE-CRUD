@@ -33,7 +33,7 @@ function DeletePage() {
     }
     async function useDelete() {
 		try {
-			await axios.delete(`https://dose-server.onrender.com/api${userId}`);
+			await axios.delete(`https://dose-server.onrender.com/api/${userId}`);
             
 			navigate("/list");
             toast.warn(`${user.name} has been deleted!`,{

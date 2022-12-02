@@ -20,7 +20,7 @@ function Edit() {
 		function () {
 			async function getCrudById() {
 				try {
-					const response = await axios.get(`https://dose-server.onrender.com/api${userId}`
+					const response = await axios.get(`https://dose-server.onrender.com/api/${userId}`
 					);
 					setUser(response.data[0]);
 				} catch (error) {
@@ -32,7 +32,7 @@ function Edit() {
 	);
 	async function updateData() {
 		try {
-			axios.put(`https://dose-server.onrender.com/api${userId}`,{
+			axios.put(`https://dose-server.onrender.com/api/${userId}`,{
 						name :name,
 						age:age,
 						height:height,
