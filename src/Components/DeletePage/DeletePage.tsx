@@ -16,7 +16,7 @@ function DeletePage() {
 		function () {
 			async function getCrudById() {
 				try {
-					const response = await axios.get(`https://dose-server.onrender.com/api${userId}`
+					const response = await axios.get(`https://dose-server.onrender.com/api/${userId}`
 					);
 					setUser(response.data[0]);
 				} catch (error) {
