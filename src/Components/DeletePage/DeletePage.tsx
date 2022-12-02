@@ -16,7 +16,7 @@ function DeletePage() {
 		function () {
 			async function getCrudById() {
 				try {
-					const response = await axios.get(`https://dose.herokuapp.com/api/${userId}`
+					const response = await axios.get(`https://dose-server.onrender.com/api${userId}`
 					);
 					setUser(response.data[0]);
 				} catch (error) {
@@ -33,7 +33,7 @@ function DeletePage() {
     }
     async function useDelete() {
 		try {
-			await axios.delete(`https://dose.herokuapp.com/api/${userId}`);
+			await axios.delete(`https://dose-server.onrender.com/api${userId}`);
             
 			navigate("/list");
             toast.warn(`${user.name} has been deleted!`,{

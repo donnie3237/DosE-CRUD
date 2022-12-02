@@ -16,7 +16,7 @@ AOS.init();
 	const [desc,setDesc]=useState('')
 	console.log('name :'+name,'\n','age:' +age,'\n','height:'+height,'\n','weight:'+weight,'\n','description:'+desc)
 	function postData(){
-		Axios.post("https://dose.herokuapp.com/api",{
+		Axios.post("https://dose-server.onrender.com/api",{
 			name :name,
 			age:age,
 			height:height,

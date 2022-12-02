@@ -10,7 +10,7 @@ AOS.init();
 function Vdata() {
 	const [user, setUser] = useState([]);
 	useEffect(() => {
-		axios.get("https://dose.herokuapp.com/api")
+		axios.get("https://dose-server.onrender.com/api")
 		.then(response => {setUser(response.data);})
 		.catch(err =>console.log(err))}, [])
 	return (
