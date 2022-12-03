@@ -36,7 +36,8 @@ function Edit() {
 		}
 	);
 	async function updateData() {
-			await axios.put(`https://dose-server.onrender.com/api/${userId}`,{
+		try {
+			axios.put(`https://dose-server.onrender.com/api/${userId}`,{
 						name :name,
 						age:age,
 						height:height,
@@ -44,9 +45,12 @@ function Edit() {
 						descrip :desc
 					});
 			navigate("/list");
-			toast.success(`${name} has been Updated!`,{
+			toast.success(`${name} has been Updateted!`,{
                 position:"bottom-right"}
             )
+		} catch (error) {
+			console.error(error);
+		}
 	}
   return (
     <div className="edit">
