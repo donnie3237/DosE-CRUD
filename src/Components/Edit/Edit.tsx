@@ -23,16 +23,18 @@ function Edit() {
 					const response = await axios.get(`https://dose-server.onrender.com/api/${userId}`
 					);
 					setUser(response.data[0]);
-				} catch (error) {
-					console.log("error", error);
-				}
+				} 
+				setName(document.getElementById('name').value)
+			  	setAge(document.getElementById('age').value)
+			 	setHeight(document.getElementById('height').value)
+			  	setWeight(document.getElementById('weight').value)
+			  	setDesc(document.getElementById('desc').value)
 			}
 			getCrudById();
 		}
 	);
 	async function updateData() {
-		try {
-			axios.put(`https://dose-server.onrender.com/api/${userId}`,{
+			await axios.put(`https://dose-server.onrender.com/api/${userId}`,{
 						name :name,
 						age:age,
 						height:height,
@@ -40,21 +42,10 @@ function Edit() {
 						descrip :desc
 					});
 			navigate("/list");
-            alert(`${name} has been Updated! please relode Page :)`)
-		} catch (error) {
-			console.error(error);
-		}
-        
+			toast.success(`${name} has been Updated!`,{
+                position:"bottom-right"}
+            )
 	}
-  useEffect(
-    function(){
-      setName(document.getElementById('name').value)
-      setAge(document.getElementById('age').value)
-      setHeight(document.getElementById('height').value)
-      setWeight(document.getElementById('weight').value)
-      setDesc(document.getElementById('desc').value)
-    }
-  )
   return (
     <div className="edit">
       <h1>Edit Data!!</h1>
