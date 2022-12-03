@@ -8,7 +8,6 @@ function Detail() {
 	const [user, setUser] = useState({});
 	let link = window.location.href
 	let userId = link.replace('https://dose-crud.netlify.app/#/list/view/','').toString()
-    console.log("userId:"+userId)
 	useEffect(
 		function () {
 			async function getCrudById() {
@@ -23,7 +22,6 @@ function Detail() {
 			getCrudById();
 		}
 	);
-	console.log(user)
   return (
 	<div className="det">
 		<h1>รายชื่อ</h1>

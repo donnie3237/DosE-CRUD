@@ -8,13 +8,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 AOS.init();
 
- function Create(){
+function Create(){
 	const [name,setName] = useState('')
 	const [age,setAge]= useState(0)
 	const [height,setHeight]=useState(0)
 	const [weight,setWeight]=useState(0)
 	const [desc,setDesc]=useState('')
-	console.log('name :'+name,'\n','age:' +age,'\n','height:'+height,'\n','weight:'+weight,'\n','description:'+desc)
 	function postData(){
 		Axios.post("https://dose-server.onrender.com/api",{
 			name :name,
@@ -37,11 +36,9 @@ AOS.init();
 		setWeight(0)
 		setDesc('')
 	}
-
 	function handleClick(){
 		let w50 = document.getElementById('w50');	
 		let change = document.getElementById('change');
-		// add class avtive
 		w50.style.width = '50%';
 		w50.style.transition = 'width 1s';
 		change.style.display = 'none';

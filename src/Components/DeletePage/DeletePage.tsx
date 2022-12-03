@@ -26,7 +26,6 @@ function DeletePage() {
 			getCrudById();
 		}
 	);
-    console.log(user)
     function Nope(){
         ConFrim.style.left = '100%'
         ConFrim.style.transition = 'all 0.5s';
@@ -34,7 +33,6 @@ function DeletePage() {
     async function useDelete() {
 		try {
 			await axios.delete(`https://dose-server.onrender.com/api/${userId}`);
-            
 			navigate("/list");
             toast.warn(`${user.name} has been deleted!`,{
                 position:"bottom-right"}
@@ -42,11 +40,9 @@ function DeletePage() {
 		} catch (error) {
 			console.error(error);
 		}
-        
 	}
     function Delete(){
 		var ConFrim = document.getElementById('ConFrim');	
-		// add class avtive
 		ConFrim.style.left = '10%';
 		ConFrim.style.transition = 'all 0.5s';
 	}
