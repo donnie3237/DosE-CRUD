@@ -34,7 +34,7 @@ function DeletePage() {
 			axios.delete(`https://dose-server.onrender.com/api/${userId}`);
 			navigate("/list");
             toast.warn(`${user.name} has been deleted!`,{
-                position:"bottom-right"}
+                position:"top-right"}
             )
 	}
     function Delete(){
@@ -68,7 +68,7 @@ function DeletePage() {
             </div>
         </div>
         <ToastContainer
-				position="bottom-right"
+				position="top-right"
 				autoClose={false}
 				newestOnTop={false}
 				closeOnClick={false}
