@@ -30,20 +30,22 @@ function DeletePage() {
         ConFrim.style.left = '100%'
         ConFrim.style.transition = 'all 0.5s';
     }
-    async function useDelete() {
-		try {
-			await axios.delete(`https://dose-server.onrender.com/api/${userId}`);
+    const imDelete = ()=>{
+        axios.delete(`https://dose-server.onrender.com/api/${userId}`);
 			navigate("/list");
             toast.warn(`${user.name} has been deleted!`,{
                 position:"bottom-right"}
             )
-		} catch (error) {
-			console.error(error);
-		}
+    }
+    function useDelete() {
+			axios.delete(`https://dose-server.onrender.com/api/${userId}`);
+			navigate("/list");
+            toast.warn(`${user.name} has been deleted!`,{
+                position:"bottom-right"}
+            )
 	}
     function Delete(){
 		var ConFrim = document.getElementById('ConFrim');	
-		// add class avtive
 		ConFrim.style.left = '10%';
 		ConFrim.style.transition = 'all 0.5s';
 	}
@@ -67,7 +69,7 @@ function DeletePage() {
         <div className="confrim" id='ConFrim'>
             <p>Are you Sure To delete!!</p>
             <div className="sure">
-                <a  className='yes' onClick={useDelete}>Yes!!</a>
+                <a  className='yes' onClick={imDelete}>Yes!!</a>
                 <a  className='no' id='exit' onClick={Nope}>No</a>
             </div>
         </div>
