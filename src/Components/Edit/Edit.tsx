@@ -35,20 +35,38 @@ function Edit() {
 			getCrudById();
 		}
 	);
-	function updateData() {
-			axios.put(`https://dose-server.onrender.com/api/${userId}`,{
+	const imUpdate = ()=>{
+        axios.put(`https://dose-server.onrender.com/api/${userId}`,{
 						name :name,
 						age:age,
 						height:height,
 						weight:weight,
 						descrip :desc
 					});
-			navigate("/list");
-			alert(`${name} has been Updateted!`)
-			setTimeout(() => {
-				window.location.reload()
-			}, 2000);
-		} 
+        toast.warn(`${name} has been Updated!`,{
+            position:"top-right"}
+        )
+		setTimeout(() => {
+            navigate("/list");
+        }, 1000); 
+		setTimeout(() => {
+			window.location.reload()
+		}, 2000);
+    }
+	// function updateData() {
+	// 		axios.put(`https://dose-server.onrender.com/api/${userId}`,{
+	// 					name :name,
+	// 					age:age,
+	// 					height:height,
+	// 					weight:weight,
+	// 					descrip :desc
+	// 				});
+	// 		navigate("/list");
+	// 		alert(`${name} has been Updateted!`)
+	// 		setTimeout(() => {
+	// 			window.location.reload()
+	// 		}, 2000);
+	// 	} 
   return (
     <div className="edit">
       <h1>Edit Data!!</h1>
@@ -59,7 +77,7 @@ function Edit() {
             <input id='weight' type="number" placeholder='New weight' defaultValue={user.weight} onChange={(e) => {setWeight(e.target.value)}}/>
             <textarea id='desc' rows="5" placeholder='New Description' defaultValue={user.descrip} onChange={(e) => {setDesc(e.target.value)}}></textarea>
             <div className="btng">
-                <button className='editt' onClick={updateData}>Edit</button>
+                <button className='editt' onClick={imUpdate}>Edit</button>
                 <NavLink to='/list' className='etli'>Close</NavLink>
             </div>
         </div>

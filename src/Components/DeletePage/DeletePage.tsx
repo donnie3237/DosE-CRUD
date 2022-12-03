@@ -33,16 +33,12 @@ function DeletePage() {
     const imDelete = ()=>{
         axios.delete(`https://dose-server.onrender.com/api/${userId}`);
         toast.warn(`${user.name} has been deleted!`,{
-            position:"bottom-right"}
+            position:"top-right"}
         )
 		setTimeout(() => {
             navigate("/list");
         }, 1000); 
     }
-    function useDelete() {
-			axios.delete(`https://dose-server.onrender.com/api/${userId}`);
-			navigate("/list");
-	}
     function Delete(){
 		var ConFrim = document.getElementById('ConFrim');	
 		ConFrim.style.left = '10%';
@@ -73,7 +69,6 @@ function DeletePage() {
             </div>
         </div>
     </div>
-
   )
 }
 
