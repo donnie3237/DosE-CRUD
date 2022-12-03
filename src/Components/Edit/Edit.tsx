@@ -23,7 +23,9 @@ function Edit() {
 					const response = await axios.get(`https://dose-server.onrender.com/api/${userId}`
 					);
 					setUser(response.data[0]);
-				} 
+				} catch (error) {
+					console.log("error", error);
+				}
 				setName(document.getElementById('name').value)
 			  	setAge(document.getElementById('age').value)
 			 	setHeight(document.getElementById('height').value)
