@@ -35,8 +35,7 @@ function Edit() {
 			getCrudById();
 		}
 	);
-	async function updateData() {
-		try {
+	function updateData() {
 			axios.put(`https://dose-server.onrender.com/api/${userId}`,{
 						name :name,
 						age:age,
@@ -48,10 +47,7 @@ function Edit() {
 			toast.success(`${name} has been Updateted!`,{
                 position:"bottom-right"}
             )
-		} catch (error) {
-			console.error(error);
-		}
-	}
+		} 
   return (
     <div className="edit">
       <h1>Edit Data!!</h1>
