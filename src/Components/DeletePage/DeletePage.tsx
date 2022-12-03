@@ -32,17 +32,16 @@ function DeletePage() {
     }
     const imDelete = ()=>{
         axios.delete(`https://dose-server.onrender.com/api/${userId}`);
-			navigate("/list");
-            toast.warn(`${user.name} has been deleted!`,{
-                position:"bottom-right"}
-            )
+        toast.warn(`${user.name} has been deleted!`,{
+            position:"bottom-right"}
+        )
+		setTimeout(() => {
+            navigate("/list");
+        }, 1000); 
     }
     function useDelete() {
 			axios.delete(`https://dose-server.onrender.com/api/${userId}`);
 			navigate("/list");
-            toast.warn(`${user.name} has been deleted!`,{
-                position:"bottom-right"}
-            )
 	}
     function Delete(){
 		var ConFrim = document.getElementById('ConFrim');	
@@ -73,17 +72,8 @@ function DeletePage() {
                 <a  className='no' id='exit' onClick={Nope}>No</a>
             </div>
         </div>
-        <ToastContainer
-				position="bottom-right"
-				autoClose={false}
-				newestOnTop={false}
-				closeOnClick={false}
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-			/>
     </div>
-    
+
   )
 }
 
