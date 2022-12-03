@@ -30,12 +30,16 @@ function DeletePage() {
         ConFrim.style.left = '100%'
         ConFrim.style.transition = 'all 0.5s';
     }
-    function useDelete() {
-			axios.delete(`https://dose-server.onrender.com/api/${userId}`);
+    async function useDelete() {
+		try {
+			await axios.delete(`https://dose-server.onrender.com/api/${userId}`);
 			navigate("/list");
             toast.warn(`${user.name} has been deleted!`,{
-                position:"top-right"}
+                position:"bottom-right"}
             )
+		} catch (error) {
+			console.error(error);
+		}
 	}
     function Delete(){
 		var ConFrim = document.getElementById('ConFrim');	
@@ -68,7 +72,7 @@ function DeletePage() {
             </div>
         </div>
         <ToastContainer
-				position="top-right"
+				position="bottom-right"
 				autoClose={false}
 				newestOnTop={false}
 				closeOnClick={false}
