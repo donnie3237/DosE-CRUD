@@ -44,10 +44,10 @@ function Edit() {
 						descrip :desc
 					});
 			navigate("/list");
-			toast.success(`${name} has been Updateted!`)
+			alert(`${name} has been Updateted!`)
 			setTimeout(() => {
 				window.location.reload()
-			}, 3000);
+			}, 2000);
 		} 
   return (
     <div className="edit">
