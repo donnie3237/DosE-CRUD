@@ -45,6 +45,9 @@ function Edit() {
 					});
 			navigate("/list");
 			toast.success(`${name} has been Updateted!`)
+			setTimeout(() => {
+				window.location.reload()
+			}, 3000);
 		} 
   return (
     <div className="edit">
