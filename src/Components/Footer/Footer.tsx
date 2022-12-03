@@ -10,8 +10,8 @@ function Footer() {
           <img src={logo} alt="" />
         </div>
         <div className="ftop2">
-          <p>Serverhost: <a href='https://dose.herokuapp.com/' target='blank'>https://dose.herokuapp.com/</a></p>
-          <p>compass : mongodb+srv://dose:1234@firstdatabase.m0bf5u9.mongodb.net/test</p>
+          <p>Serverhost: <a href='https://dose-server.onrender.com/' target='blank'>https://dose-server.onrender.com/</a></p>
+          <p>Compass : mongodb+srv://dose:1234@firstdatabase.m0bf5u9.mongodb.net/test</p>
           <p>Email : paradorn3237@gmail.com</p>
           <a href="https://www.facebook.com/profile.php?id=100007215521248" target='blank'>FaceBook</a>
           <a href="https://twitter.com/Ksfdd1" target='blank'>TwitTer</a>
