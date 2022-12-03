@@ -47,7 +47,7 @@ function Edit() {
 			alert(`${name} has been Updateted!`)
 			setTimeout(() => {
 				window.location.reload()
-			}, 500);
+			}, 2000);
 		} 
   return (
     <div className="edit">
