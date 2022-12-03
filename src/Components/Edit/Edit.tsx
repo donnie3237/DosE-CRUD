@@ -64,7 +64,7 @@ function Edit() {
             </div>
         </div>
         <ToastContainer
-				position="bottom-right"
+				position="top-right"
 				autoClose={false}
 				newestOnTop={false}
 				closeOnClick={false}

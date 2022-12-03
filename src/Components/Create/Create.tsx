@@ -23,7 +23,7 @@ function Create(){
 			descrip :desc
 		})
 		toast.success(`${name} has been created!`,{
-			position:"bottom-right"}
+			position:"top-right"}
 		)
 		document.getElementById('name').value = ''
 		document.getElementById('age').value =''
@@ -101,7 +101,7 @@ function Create(){
 				</div>
 			</div>
 			<ToastContainer
-				position="bottom-right"
+				position="top-right"
 				autoClose={false}
 				newestOnTop={false}
 				closeOnClick={false}

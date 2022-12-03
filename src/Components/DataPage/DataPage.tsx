@@ -20,7 +20,6 @@ function DataPage() {
   window.addEventListener('scroll', setfixed)
   return (
     <div className='DataAll' >
-      
         <div className="mongo-head" id='dotenv'>
         <div className={fix ? 'bar fix':'bar'}>
             <HashLink to='#dotenv'>DOTENV</HashLink> <HashLink to='#json'>JSON</HashLink><HashLink to='#mongoose'>CLOUD</HashLink><HashLink to='#compass'>COMPASS</HashLink><HashLink to='#nodemon'>NODEMON</HashLink>
@@ -90,7 +89,7 @@ function DataPage() {
           </div>
         </div>
         <ToastContainer
-				position="bottom-right"
+				position="top-right"
 				autoClose={false}
 				newestOnTop={false}
 				closeOnClick={false}
