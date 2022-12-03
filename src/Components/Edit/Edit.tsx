@@ -44,9 +44,7 @@ function Edit() {
 						descrip :desc
 					});
 			navigate("/list");
-			toast.success(`${name} has been Updateted!`,{
-                position:"bottom-right"}
-            )
+			toast.success(`${name} has been Updateted!`)
 		} 
   return (
     <div className="edit">
@@ -60,7 +58,6 @@ function Edit() {
             <div className="btng">
                 <button className='editt' onClick={updateData}>Edit</button>
                 <NavLink to='/list' className='etli'>Close</NavLink>
-                
             </div>
         </div>
         <ToastContainer
