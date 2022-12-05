@@ -15,7 +15,7 @@ function Create(){
 	const [weight,setWeight]=useState(0)
 	const [desc,setDesc]=useState('')
 	function postData(){
-		Axios.post("https://crud-server-7mzw.vercel.app/add",{
+		Axios.post("https://dose-server.onrender.com/add",{
 			name :name,
 			age:age,
 			height:height,
