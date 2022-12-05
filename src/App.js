@@ -11,6 +11,7 @@ import DataPage from './Components/DataPage/DataPage.tsx';
 import Detail from './Components/detail/Detail.tsx';
 import Edit from './Components/Edit/Edit.tsx';
 import DeletePage from './Components/DeletePage/DeletePage.tsx';
+
 function App() {
   return (
     <div className="App">
