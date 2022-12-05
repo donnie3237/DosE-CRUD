@@ -10,7 +10,7 @@ AOS.init();
 function Vdata() {
 	const [user, setUser] = useState([]);
 	useEffect(() => {
-		axios.get("https://dose-server.onrender.com/api")
+		axios.get("https://crud-server-7mzw.vercel.app/api")
 		.then(response => {setUser(response.data);})
 		.catch(err =>console.log(err))}, [])
 	return (
