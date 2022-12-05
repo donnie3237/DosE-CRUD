@@ -20,16 +20,16 @@ app.use(express.urlencoded({ extended : true}))
 app.listen(PORT,()=>
     {
         console.log('running on port:',PORT)
-        MongoClient.connect(Datadase_URI,{useNewUrlParser:true},(err,result)=>{
-            if (err){console.log('err :'+err)}
-            database = result.db('mydb')
-            console.log('connected to database')
-        })
+        
     }
 )
-
 //นี่คือเราเตอร์ของเซิฟเวอร์(ของจิงต้องอิมพอร์ตเข้า เพราะมันมีเราเตอร์เยอะมากๆ)
-
+MongoClient.connect(Datadase_URI,{useNewUrlParser:true},(err,result)=>{
+    if (err){console.log('err :'+err)}
+    database = result.db('mydb')
+    console.log('connected to database')
+    console.log(database)
+})
 //นี่คือหน้าหลักหรือ indexของServer
 app.get('/', function(req,res){
     res.sendFile(path.join(__dirname,'./server.html'));

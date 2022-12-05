@@ -20,7 +20,7 @@ function Edit() {
 		function () {
 			async function getCrudById() {
 				try {
-					const response = await axios.get(`https://dose-server.onrender.com/api/${userId}`
+					const response = await axios.get(`https://crud-server-7mzw.vercel.app/api/${userId}`
 					);
 					setUser(response.data[0]);
 				} catch (error) {
@@ -36,7 +36,7 @@ function Edit() {
 		}
 	);
 	function updateData() {
-			axios.put(`https://dose-server.onrender.com/api/${userId}`,{
+			axios.put(`https://crud-server-7mzw.vercel.app/api/${userId}`,{
 						name :name,
 						age:age,
 						height:height,
