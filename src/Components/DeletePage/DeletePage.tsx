@@ -16,7 +16,7 @@ function DeletePage() {
 		function () {
 			async function getCrudById() {
 				try {
-					const response = await axios.get(`https://crud-server-7mzw.vercel.app/api/${userId}`
+					const response = await axios.get(`https://crud-server-7mzw.vercel.app/see/${userId}`
 					);
 					setUser(response.data[0]);
 				} catch (error) {
@@ -31,7 +31,7 @@ function DeletePage() {
         ConFrim.style.transition = 'all 0.5s';
     }
     const imDelete = ()=>{
-        axios.delete(`https://crud-server-7mzw.vercel.app/api/${userId}`);
+        axios.delete(`https://crud-server-7mzw.vercel.app/delete/${userId}`);
         toast.warn(`${user.name} has been deleted!`,{
             position:"top-right"}
         )

@@ -12,7 +12,7 @@ function Detail() {
 		function () {
 			async function getCrudById() {
 				try {
-					const response = await axios.get(`https://crud-server-7mzw.vercel.app/api/${userId}`
+					const response = await axios.get(`https://crud-server-7mzw.vercel.app/see/${userId}`
 					);
 					setUser(response.data[0]);
 				} catch (error) {
