@@ -1,0 +1,49 @@
+.foott{
+    width: 100vw;
+    height: 30vh;
+    background-color: black;
+}
+.foott p{
+    color: white;
+    font-size: 12px;
+}
+.footb{
+    display: flex;
+    justify-content: center;
+}
+.pink{
+    color: pink;
+}
+.ftop{
+    height: 23vh;
+    width: 100%;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+.Logof{
+    width:15vh;
+    height: 15vh;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+.Logof img{
+    width: 15vh;
+    height: 15vh;
+}
+.ftop2 a{
+    color: white;
+    font-size: 12px;
+    padding-right: 10px;
+}
+@media screen and (max-width:700px) {
+    .ftop2 p{
+        font-size: 10px;
+        margin: 2px 0;
+        width: 70%;
+    }
+    .Logof{
+        width: 20%;
+    }
+}
