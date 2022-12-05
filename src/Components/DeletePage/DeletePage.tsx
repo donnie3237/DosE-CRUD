@@ -35,9 +35,7 @@ function DeletePage() {
         toast.warn(`${user.name} has been deleted!`,{
             position:"top-right"}
         )
-		setTimeout(() => {
-            navigate("/list");
-        }, 1000); 
+        navigate("/list");
     }
     function Delete(){
 		var ConFrim = document.getElementById('ConFrim');	
@@ -68,6 +66,15 @@ function DeletePage() {
                 <a  className='no' id='exit' onClick={Nope}>No</a>
             </div>
         </div>
+        <ToastContainer
+				position="top-right"
+				autoClose={false}
+				newestOnTop={false}
+				closeOnClick={false}
+				rtl={false}
+				pauseOnFocusLoss
+				draggable
+				/>
     </div>
   )
 }

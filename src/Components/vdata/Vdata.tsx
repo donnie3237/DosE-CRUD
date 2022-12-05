@@ -6,7 +6,6 @@ import AOS from 'aos'
 import { ToastContainer, toast } from 'react-toastify';
 
 AOS.init();
-
 function Vdata() {
 	const [user, setUser] = useState([]);
 	useEffect(() => {

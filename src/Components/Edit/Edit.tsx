@@ -43,11 +43,8 @@ function Edit() {
 						weight:weight,
 						descrip :desc
 					});
-			navigate("/list");
 			alert(`${name} has been Updateted!`)
-			setTimeout(() => {
-				window.location.reload()
-			}, 2000);
+			navigate("/list");
 		} 
   return (
     <div className="edit">
