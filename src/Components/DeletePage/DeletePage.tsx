@@ -11,7 +11,6 @@ function DeletePage() {
     const [user, setUser] = useState([]);
     let link = window.location.href
 	let userId = link.replace('https://dose-crud.netlify.app/#/list/delete/','').toString()
-	console.log(userId)
     useEffect(
 		function () {
 			async function getCrudById() {
