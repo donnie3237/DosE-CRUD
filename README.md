@@ -1,4 +1,4 @@
-<h1 align="center">CRUD-MERN</h1>
+<h1 align="center">Dose-CRUD</h1>
 <br/>
 
 <h3 align="center">ReactJS-ExpressJS-MongoDB-NodeJS</h3>
