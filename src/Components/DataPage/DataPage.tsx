@@ -30,7 +30,7 @@ function DataPage() {
           </div>
         </div>
         <div className="big" data-aos='zoom-in' >
-          <div className="dotenv"  >
+          <div className="dotenv" ata-aos='fade-right' >
             <div className="title"><p>DOTENV</p></div>
             <div className="envdata" >
               <div className="image">
@@ -42,7 +42,7 @@ function DataPage() {
               </div>
             </div>
           </div>
-          <div className="JSON" >
+          <div className="JSON" data-aos='fade-left' >
             <div className="title"><p>JSON</p></div>
             <div className="JSONdata">
               <div className="image">
@@ -56,7 +56,7 @@ function DataPage() {
                 </div>
             </div>
           </div>
-          <div className="mongoose" >
+          <div className="mongoose" data-aos='fade-right' >
             <div className="title"><p>Cloud</p></div>
             <div className="mongoosedata" >
               <div className="image">
@@ -67,7 +67,7 @@ function DataPage() {
                 </div>
             </div>
           </div>
-          <div className="compass" >
+          <div className="compass" data-aos='fade-left' >
             <div className="title"><p>Compass</p></div>
             <div className="compassdata" >
               <div className="image">
@@ -79,7 +79,7 @@ function DataPage() {
                 </div>
             </div>
           </div>
-          <div className="nodemon">
+          <div className="nodemon" data-aos='fade-right' >
             <div className="title"><p>Nodemon</p></div>
             <div className="nodemondata" >
               <div className="image">
