@@ -7,7 +7,7 @@ AOS.init();
 
 function ApiPage() {
   return (
-    <div className='Allapi' data-aos='zoom-up'>
+    <div className='Allapi' >
       <div className="api1">
         <img src={require('./img/Ql.png')}/>
         <div className="textt">
