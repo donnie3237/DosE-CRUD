@@ -42,13 +42,11 @@ tbody{
 }
 tr{
   height: 30px;
+  border: #323532 1px solid;
 }
 td{
   text-align: center;
   padding: 10px;
-}
-tr{
-  border: #323532 1px solid;
 }
 .gap{
   margin: 0 3px;
