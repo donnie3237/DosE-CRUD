@@ -22,7 +22,11 @@ function DataPage() {
     <div className='DataAll' >
         <div className="mongo-head" id='dotenv'>
         <div className={fix ? 'bar fix':'bar'}>
-            <HashLink to='#dotenv'>DOTENV</HashLink> <HashLink to='#json'>JSON</HashLink><HashLink to='#mongoose'>CLOUD</HashLink><HashLink to='#compass'>COMPASS</HashLink><HashLink to='#nodemon'>NODEMON</HashLink>
+            <HashLink smooth to='#dotenv'>DOTENV</HashLink>
+            <HashLink smooth to='#json'>JSON</HashLink>
+            <HashLink smooth to='#mongoose'>CLOUD</HashLink>
+            <HashLink smooth to='#compass'>COMPASS</HashLink>
+            <HashLink smooth to='#nodemon'>NODEMON</HashLink>
           </div>
         </div>
         <div className="big" data-aos='zoom-in' >
