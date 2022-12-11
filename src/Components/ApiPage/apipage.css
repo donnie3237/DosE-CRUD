@@ -5,7 +5,6 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    overflow-x: hidden;
 }
 .api1{
     height: 80vh;
