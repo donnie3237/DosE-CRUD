@@ -1,5 +1,5 @@
 import React from 'react'
-import './footer.css'
+import './footer.scss'
 import logo from './img/logo.png'
 
 function Footer() {
@@ -17,7 +17,7 @@ function Footer() {
           <a href="https://twitter.com/Ksfdd1" target='blank'>TwitTer</a>
           </div>
       </div>
-        <p className='footb'>MadeBy:<div className='pink'>Paradorn Lungchoy</div> </p>
+        <p className='footb'>MadeBy: <div className="tab"></div><div className='pink'>Paradorn Lungchoy(SoRa : DOSE)</div> </p>
     </div>
   )
 }

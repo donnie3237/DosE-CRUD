@@ -10,6 +10,7 @@
 .footb{
     display: flex;
     justify-content: center;
+    padding-top: 10px;
 }
 .pink{
     color: pink;
@@ -36,6 +37,9 @@
     color: white;
     font-size: 12px;
     padding-right: 10px;
+}
+.tab{
+    width: 10px;
 }
 @media screen and (max-width:700px) {
     .ftop2 p{
