@@ -3,7 +3,6 @@ import './main.scss'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import {NavLink} from 'react-router-dom'
-
 AOS.init();
 
 function Main() {

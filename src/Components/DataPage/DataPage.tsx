@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 AOS.init();
 function DataPage() {
-  const [fix, setFix] = useState(false)
+  const [fix, setFix] = useState<boolean>(false)
   function setfixed() {
     if(window.scrollY > 150) {
       setFix(true)

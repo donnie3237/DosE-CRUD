@@ -2,20 +2,20 @@ import React from 'react'
 import {NavLink , useNavigate} from 'react-router-dom'
 import { useState ,useEffect } from 'react'
 import axios from 'axios'
-import './delete.css'
+import './delete.scss'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 function DeletePage() {
-    const navigate = useNavigate();
-    const [user, setUser] = useState([]);
-    let link = window.location.href
-	let userId = link.replace('https://dose-crud.netlify.app/#/list/delete/','').toString()
+    const navigate : any = useNavigate();
+    const [user, setUser] = useState<any>([]);
+    let link : string = window.location.href
+	let userId : string = link.replace('https://dose-crud.netlify.app/#/list/delete/','').toString()
     useEffect(
 		function () {
 			async function getCrudById() {
 				try {
-					const response = await axios.get(`https://dose-server.onrender.com/see/${userId}`
+					const response : any = await axios.get(`https://dose-server.onrender.com/see/${userId}`
 					);
 					setUser(response.data[0]);
 				} catch (error) {
@@ -29,7 +29,7 @@ function DeletePage() {
         ConFrim.style.left = '100%'
         ConFrim.style.transition = 'all 0.5s';
     }
-    const imDelete = ()=>{
+    const imDelete : any = ()=>{
         axios.delete(`https://dose-server.onrender.com/delete/${userId}`);
         toast.warn(`${user.name} has been deleted!`,{
             position:"top-right"}
@@ -66,14 +66,14 @@ function DeletePage() {
             </div>
         </div>
         <ToastContainer
-				position="top-right"
-				autoClose={false}
-				newestOnTop={false}
-				closeOnClick={false}
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-				/>
+            position="top-right"
+            autoClose={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+		/>
     </div>
   )
 }

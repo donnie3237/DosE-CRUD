@@ -7,7 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 
 AOS.init();
 function Vdata() {
-	const [user, setUser] = useState([]);
+	const [user, setUser] = useState<any>([]);
 	useEffect(() => {
 		axios.get("https://dose-server.onrender.com/api")
 		.then(response => {setUser(response.data);})

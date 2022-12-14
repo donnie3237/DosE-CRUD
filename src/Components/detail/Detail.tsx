@@ -5,14 +5,14 @@ import { useState ,useEffect } from 'react'
 import axios from 'axios'
 
 function Detail() {
-	const [user, setUser] = useState({});
-	let link = window.location.href
-	let userId = link.replace('https://dose-crud.netlify.app/#/list/view/','').toString()
+	const [user, setUser] = useState<any>({});
+	let link :string = window.location.href
+	let userId :string = link.replace('https://dose-crud.netlify.app/#/list/view/','').toString()
 	useEffect(
 		function () {
 			async function getCrudById() {
 				try {
-					const response = await axios.get(`https://dose-server.onrender.com/see/${userId}`
+					const response : any = await axios.get(`https://dose-server.onrender.com/see/${userId}`
 					);
 					setUser(response.data[0]);
 				} catch (error) {
@@ -24,7 +24,7 @@ function Detail() {
 	);
   return (
 	<div className="det">
-		<h1>รายชื่อ</h1>
+	<h1>รายชื่อ</h1>
 	 <h2><h3>Name : </h3><p>{user.name}</p></h2>
 	 <h2><h3>height : </h3><p>{user.height} cm</p></h2>
 	 <h2><h3>weight : </h3><p>{user.weight} kg</p></h2>
