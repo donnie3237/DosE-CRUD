@@ -1,14 +1,13 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import {NavLink} from 'react-router-dom'
-import './Header.css'
+import './Header.scss'
 import logo from './img/logo.png'
 function Header() {
   return (
     <div className='headpage'>
-
         <div className="logo">
-          <img src={logo} className='logo2'/>
+          <img src={logo}/>
           <a href="/">DOSE</a>
         </div>
         <nav>

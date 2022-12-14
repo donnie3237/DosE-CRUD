@@ -1,0 +1,111 @@
+.Allapi{
+    background-color: blueviolet;
+    width: 100vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    div{
+        height: 90vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .api1{
+        background-color: rgb(59, 49, 151);
+    }
+    .api2{
+        background-color: rgb(153, 255, 0);
+    }
+    .api3{
+        background-color: rgb(255, 0, 0);
+    }
+    .axi{
+        height: 40vh;
+        padding: 25vh 5vw;
+        background-color: white;
+    }
+    .cors{
+        height: 50vh;
+        padding: 20vh 5vw;
+        background-color: blue;
+    }
+    img{
+        height: 80vh;
+        padding: 5vh;
+        background-color: black;
+        width: 60vw;
+    }
+    .textt {
+        margin:0 10vh;
+        display: flex;
+        flex-direction: column;
+        a{
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: black;
+            text-align: center;
+            width: 40vw;
+            padding: 10px 0;
+            border: 1px solid white;
+            margin-top: 50px;
+            &:hover{
+                background-color: white;
+                color: black;
+                box-shadow: 0 0 10px white;
+                transition: all 0.7s;
+            }
+        }
+    }
+} 
+
+.textt p{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+@media screen and (max-width:700px){
+    .Allapi{
+        .rev{
+            flex-direction: column-reverse;
+        }
+        div{
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img{
+                height: 30vh;
+                width: auto;
+                background:none;
+                padding: 0%;
+                margin-top: 10vh;
+            }
+            .axi{
+                height: 20vh;
+                width: auto;
+                background:none;
+                padding: 0;
+                max-width: 80vw;
+            }
+            .cors{
+                height: 30vh;
+                padding: 0;
+            }
+            p{
+                text-align: center;
+                margin:0 10vw;
+            }
+            .textt{
+                height: 70vh;
+            }
+            a{
+                width: 80vw;
+                text-align: center;
+            }
+        }
+    }
+}

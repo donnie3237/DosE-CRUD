@@ -9,11 +9,11 @@ import 'react-toastify/dist/ReactToastify.css';
 AOS.init();
 
 function Create(){
-	const [name,setName] = useState('')
-	const [age,setAge]= useState(0)
-	const [height,setHeight]=useState(0)
-	const [weight,setWeight]=useState(0)
-	const [desc,setDesc]=useState('')
+	const [name,setName] = useState<string>('')
+	const [age,setAge] = useState<number>(0)
+	const [height,setHeight]=useState<number>(0)
+	const [weight,setWeight]=useState<number>(0)
+	const [desc,setDesc]=useState<string>('')
 	function postData(){
 		Axios.post("https://dose-server.onrender.com/add",{
 			name :name,
@@ -37,8 +37,8 @@ function Create(){
 		setDesc('')
 	}
 	function handleClick(){
-		let w50 = document.getElementById('w50');	
-		let change = document.getElementById('change');
+		let w50 : any = document.getElementById('w50');	
+		let change : any= document.getElementById('change');
 		w50.style.width = '50%';
 		w50.style.transition = 'width 1s';
 		change.style.display = 'none';
@@ -65,6 +65,7 @@ function Create(){
 						<input type="number" 
 							placeholder='YourAge(Y)' 
 							id='age' 
+							maxLength='10'
 							onChange={(e) => {setAge(e.target.value)}}
 						/>
 						</div>
