@@ -15,6 +15,7 @@ function Create(){
 	const [weight,setWeight]=useState<number>(0)
 	const [desc,setDesc]=useState<string>('')
 	function postData(){
+		if(name!= '' && age != 0 && height != 0 && weight != 0 && desc != ''){
 		Axios.post("https://dose-server.onrender.com/add",{
 			name :name,
 			age:age,
@@ -35,6 +36,9 @@ function Create(){
 		setHeight(0)
 		setWeight(0)
 		setDesc('')
+		}else{
+			toast.warn("กรุณากรอกข้อมูลให้ครบถ้วน!!")
+		}
 	}
 	function handleClick(){
 		let w50 : any = document.getElementById('w50');	
