@@ -1,5 +1,5 @@
 import React from 'react'
-import './data.css'
+import './data.scss'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import {useState} from 'react'
@@ -32,7 +32,7 @@ function DataPage() {
         <div className="big" data-aos='zoom-in' >
           <div className="dotenv" data-aos='zoom-out' >
             <div className="title"><p>DOTENV</p></div>
-            <div className="envdata" >
+            <div className="envdata">
               <div className="image">
                 <img src={require('./img/dotenv.png')} alt=""/>
               </div>
