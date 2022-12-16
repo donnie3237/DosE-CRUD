@@ -1,10 +1,11 @@
 .deletePage{
-    background-color: rgb(226, 43, 43);
-    width: 100vw;
     min-height: 55vh;
-    height: 65vh;
-    display: flex;
-    flex-direction: column;
+    max-height: 70vh;
+    height: 600px;
+    background-color: rgb(193, 20, 20);
+    position: relative;
+    width: 100vw;
+    overflow-x: hidden;
     .flex{
         display: flex;
         align-self: start;

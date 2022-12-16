@@ -65,15 +65,6 @@ function DeletePage() {
                 <a  className='no' id='exit' onClick={Nope}>No</a>
             </div>
         </div>
-        <ToastContainer
-            position="top-right"
-            autoClose={false}
-            newestOnTop={false}
-            closeOnClick={false}
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
-		/>
     </div>
   )
 }
