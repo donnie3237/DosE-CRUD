@@ -90,5 +90,10 @@
         cursor: pointer;
     }
 }
+@media screen and (min-width:570px) {
+    .deletePage{
+        width: 50vh;
+    }
+}
 
 // 55 - 10
