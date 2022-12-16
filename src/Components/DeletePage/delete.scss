@@ -1,8 +1,9 @@
 .deletePage{
-    height: 55vh;
+    height: 60vh;
     background-color: rgb(185, 27, 27);
     width: 100vw;
     overflow-x: hidden;
+    overflow-y: hidden;
     .flex{
         display: flex;
         align-self: start;
@@ -11,6 +12,7 @@
         width: 100vw;
         padding: 2.5vh 10vw  ;
         background-color: black;
+        margin-bottom: 5vh;
         p{
             font-size: 2.5em;
             font-weight: 900;
@@ -87,11 +89,6 @@
     .no{
         background-color: white;
         cursor: pointer;
-    }
-}
-@media screen and (min-width:570px) {
-    .deletePage{
-        width: 50vh;
     }
 }
 
