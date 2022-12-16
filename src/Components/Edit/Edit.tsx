@@ -1,5 +1,5 @@
 import React from 'react'
-import './edir.css'
+import './edir.scss'
 import {NavLink,useNavigate} from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,11 +11,11 @@ function Edit() {
   const navigate =useNavigate()
 	let link = window.location.href
 	let userId = link.replace('https://dose-crud.netlify.app/#/list/edit/','').toString()
-  	const [name,setName] = useState('')
-	const [age,setAge]= useState(0)
-	const [height,setHeight]=useState(0)
-	const [weight,setWeight]=useState(0)
-	const [desc,setDesc]=useState('')
+  	const [name,setName] = useState<string>('')
+	const [age,setAge]= useState<number>(0)
+	const [height,setHeight]=useState<number>(0)
+	const [weight,setWeight]=useState<number>(0)
+	const [desc,setDesc]=useState<string>('')
 	useEffect(
 		function () {
 			async function getCrudById() {
