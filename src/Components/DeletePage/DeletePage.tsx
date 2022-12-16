@@ -38,7 +38,7 @@ function DeletePage() {
     }
     function Delete(){
 		var ConFrim = document.getElementById('ConFrim');	
-		ConFrim.style.left = '10%';
+		ConFrim.style.left = '10vw';
 		ConFrim.style.transition = 'all 0.5s';
 	}
   return (
