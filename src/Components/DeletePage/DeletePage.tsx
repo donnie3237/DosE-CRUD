@@ -49,7 +49,7 @@ function DeletePage() {
             </svg>
             <p>DeletePage!!</p>
         </div>
-        <h2>Name : <p>{user.name} hell0</p></h2>
+        <h2>Name : <p>{user.name}</p></h2>
         <h2>Age : <p>{user.age}</p></h2>
         <h2>Height : <p>{user.height}</p></h2>
         <h2>Weight : <p>{user.weight}</p></h2>
