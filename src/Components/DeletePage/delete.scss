@@ -2,7 +2,8 @@
     height: 55vh;
     background-color: rgb(185, 27, 27);
     width: 100vw;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
     .flex{
         display: flex;
         align-self: start;
