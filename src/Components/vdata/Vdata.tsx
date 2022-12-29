@@ -1,22 +1,31 @@
 import React, { useState, useEffect } from "react";
 import axios from 'axios';
 import { NavLink } from "react-router-dom";
-import './data.css'
+import './data.scss'
 import AOS from 'aos'
+import { APiURL } from "../../api";
+import { toast } from "react-toastify";
 AOS.init();
 
 function Vdata() {
 	const [user, setUser] = useState<any>([]);
 	useEffect(() => {
-		axios.get("https://dose-server.onrender.com/api")
+		axios.get(`${APiURL}/api`)
 		.then(response => {setUser(response.data);})
-		.catch(err =>console.log(err))}, [])
+	}, [])
+	const test : any = ()=>{
+		axios.get(`${APiURL}/test`).then((response)=>{
+			if(response.data == "connected"){
+				toast.success("server is running")
+			}
+		}).catch(()=>{
+			toast.warn("server is not ready!!")
+		})
+	}
 	return (
 		<div className="contain">
 			<div className="contain-title">
-				<h2>
-					ตารางข้อมูล
-				</h2>
+				<h2>ตารางข้อมูล</h2>
 			</div>
 				<table data-aos='zoom-in'>
 					<thead>
@@ -53,6 +62,7 @@ function Vdata() {
 						})}
 				</tbody>
 				</table>
+				<button className="but" onClick={test}>test-server</button>
 				<br/>
 		</div>
 		)};
