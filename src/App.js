@@ -31,12 +31,6 @@ function App() {
             </Routes>
           <ToastContainer
             position="bottom-right"
-            autoClose={false}
-            newestOnTop={false}
-            closeOnClick={false}
-            rtl={false}
-            pauseOnFocusLoss
-            draggable
           />
           <Footer />
       </Router>

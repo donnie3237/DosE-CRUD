@@ -5,6 +5,7 @@ import Axios from "axios";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { toast } from 'react-toastify';
+import { APiURL } from '../../api';
 AOS.init();
 
 function Create(){
@@ -15,7 +16,7 @@ function Create(){
 	const [desc,setDesc]=useState<string>('')
 	function postData(){
 		if(name !== '' && age !== 0 && height !== 0 && weight !== 0 && desc !== ''){
-			Axios.post("https://dose-server.onrender.com/add",{
+			Axios.post(`${APiURL}/add`,{
 				name :name,
 				age:age,
 				height:height,
