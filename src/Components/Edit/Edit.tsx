@@ -1,10 +1,11 @@
 import React from 'react'
-import './edir.scss'
+import './edit.scss'
 import {NavLink,useNavigate} from 'react-router-dom'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 import { useEffect , useState} from 'react';
+import { APiURL } from '../../api';
 
 function Edit() {
   const [user, setUser] = useState({});
@@ -20,17 +21,22 @@ function Edit() {
 		function () {
 			async function getCrudById() {
 				try {
-					const response = await axios.get(`https://dose-server.onrender.com/see/${userId}`
+					const response = await axios.get(`${APiURL}/see/${userId}`
 					);
 					setUser(response.data[0]);
 				} catch (error) {
 					console.log("error", error);
 				}
-				setName(document.getElementById('name').value)
-			  	setAge(document.getElementById('age').value)
-			 	setHeight(document.getElementById('height').value)
-			  	setWeight(document.getElementById('weight').value)
-			  	setDesc(document.getElementById('desc').value)
+				const NaMe : any = document.getElementById('name');
+				const Age :any = document.getElementById('age') as HTMLInputElement;
+				const Height :any = document.getElementById('height') as HTMLInputElement;
+				const Weight :any = document.getElementById('weight') as HTMLInputElement;
+				const desc :any = document.getElementById('desc') as HTMLInputElement;
+				setName(NaMe.value)
+			  	setAge(Age.value)
+			 	setHeight(Height.value)
+			  	setWeight(Weight.value)
+			  	setDesc(desc.value)
 			}
 			getCrudById();
 		}
@@ -42,6 +48,8 @@ function Edit() {
 						height:height,
 						weight:weight,
 						descrip :desc
+					}).then((Response)=>{
+						if(Response.data === "Updated")
 					});
 			alert(`${name} has been Updateted!`)
 			navigate("/list");
@@ -60,15 +68,6 @@ function Edit() {
                 <NavLink to='/list' className='etli'>Close</NavLink>
             </div>
         </div>
-        <ToastContainer
-				position="top-right"
-				autoClose={false}
-				newestOnTop={false}
-				closeOnClick={false}
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-		/>
     </div>
   )
 }

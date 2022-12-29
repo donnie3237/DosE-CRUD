@@ -7,6 +7,20 @@
   flex-direction: column;
   align-items: center;
   background:gray;
+  .contain-title{
+    width: 100%;
+    background-color: black;
+    font-family: 'Noto Sans Thai Looped', sans-serif;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 3%;
+    h2{
+      color: white;
+      font-size: 25px;
+    }
+  }
   .but{
     width: 70vw;
     height: 30px;
@@ -20,44 +34,31 @@
     }
   }
 }
-.contain-title{
-  width: 100%;
-  background-color: black;
-  font-family: 'Noto Sans Thai Looped', sans-serif;
-  height: 10%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 3%;
-  h2{
-    color: white;
-    font-size: 25px;
-  }
-}
 table{
   border-collapse: collapse;
   width: 90%;
   margin-top: 5px;
-}
-thead{
-  background-color: #323532;
-  color: white;
-  height: 30px;
-}
-th{
-  text-align: center;
-  padding: 10px;
-}
-tbody{
-  background-color: #ebdfdf;
-}
-tr{
-  height: 30px;
-  border: #323532 1px solid;
-}
-td{
-  text-align: center;
-  padding: 10px;
+  thead{
+    background-color: #323532;
+    color: white;
+    height: 30px;
+    th{
+      text-align: center;
+      padding: 10px;
+    }
+  }
+  tbody{
+    background-color: #ebdfdf;
+    tr{
+      height: 30px;
+      border: #323532 1px solid;
+    }
+    td{
+      text-align: center;
+      padding: 10px;
+    }
+  }
+  
 }
 .gap{
   margin: 0 3px;

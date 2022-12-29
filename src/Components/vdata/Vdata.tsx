@@ -15,7 +15,7 @@ function Vdata() {
 	}, [])
 	const test : any = ()=>{
 		axios.get(`${APiURL}/test`).then((response)=>{
-			if(response.data == "connected"){
+			if(response.data === "connected"){
 				toast.success("server is running")
 			}
 		}).catch(()=>{
