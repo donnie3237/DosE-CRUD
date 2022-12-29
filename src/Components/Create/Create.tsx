@@ -22,7 +22,7 @@ function Create(){
 				weight:weight,
 				descrip :desc
 			}).then((response)=>{
-				if(response.data = 'success'){
+				if(response.data === 'success'){
 				toast.success(`${name} has been created!`,{
 					position:"bottom-right"}
 				)
@@ -41,10 +41,12 @@ function Create(){
 				setHeight(0)
 				setWeight(0)
 				setDesc('')
-			}else {
-				toast.warn('error')
+				}
+		}).catch(
+			(error)=>{
+				toast.warn("server is not ready!!")
 			}
-		})
+		)
 		}else{
 			toast.warn("กรุณากรอกข้อมูลให้ครบถ้วน!!")
 		}

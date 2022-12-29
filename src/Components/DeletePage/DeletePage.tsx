@@ -59,8 +59,8 @@ function DeletePage() {
         <div className="confrim" id='ConFrim'>
             <p>Are you Sure To delete!!</p>
             <div className="sure">
-                <a  className='yes' onClick={imDelete}>Yes!!</a>
-                <a  className='no' id='exit' onClick={Nope}>No</a>
+                <div className='yes' onClick={imDelete}>Yes!!</div>
+                <div className='no' id='exit' onClick={Nope}>No</div>
             </div>
         </div>
     </div>
