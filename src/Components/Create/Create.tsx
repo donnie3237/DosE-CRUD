@@ -4,7 +4,7 @@ import './create.css'
 import Axios from "axios";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 AOS.init();
 
@@ -15,34 +15,43 @@ function Create(){
 	const [weight,setWeight]=useState<number>(0)
 	const [desc,setDesc]=useState<string>('')
 	function postData(){
-		if(name!= '' && age != 0 && height != 0 && weight != 0 && desc != ''){
+		if(name !== '' && age !== 0 && height !== 0 && weight !== 0 && desc !== ''){
 		Axios.post("https://dose-server.onrender.com/add",{
 			name :name,
 			age:age,
 			height:height,
 			weight:weight,
 			descrip :desc
+		}).then((response)=>{
+			if(response.data = 'success'){
+				toast.success(`${name} has been created!`,{
+					position:"bottom-right"}
+				)
+				const TheName =document.getElementById('name') as HTMLInputElement ;
+				const TheAge = document.getElementById('age') as HTMLInputElement ;
+				const TheHeight =document.getElementById('height') as HTMLInputElement ;
+				const TheWeight = document.getElementById('weight') as HTMLInputElement ;
+				TheName.value = ''
+				TheAge.value = ''
+				.value = ''
+				document.getElementById('weight').value = ''
+				document.getElementById('desc').value = ''
+				setAge(0)
+				setName('')
+				setHeight(0)
+				setWeight(0)
+				setDesc('')
+			}
 		})
-		toast.success(`${name} has been created!`,{
-			position:"bottom-right"}
-		)
-		document.getElementById('name').value = ''
-		document.getElementById('age').value =''
-		document.getElementById('height').value = ''
-		document.getElementById('weight').value = ''
-		document.getElementById('desc').value = ''
-		setAge(0)
-		setName('')
-		setHeight(0)
-		setWeight(0)
-		setDesc('')
+		
+		
 		}else{
 			toast.warn("กรุณากรอกข้อมูลให้ครบถ้วน!!")
 		}
 	}
 	function handleClick(){
-		let w50 : any = document.getElementById('w50');	
-		let change : any= document.getElementById('change');
+		const w50 : any = document.getElementById('w50') as HTMLElement ;	
+		const change : any= document.getElementById('change') as HTMLElement ;
 		w50.style.width = '50%';
 		w50.style.transition = 'width 1s';
 		change.style.display = 'none';
@@ -105,15 +114,6 @@ function Create(){
 				<div className="imgr" id='w50' onClick={handleClick}>
 				</div>
 			</div>
-			<ToastContainer
-				position="bottom-right"
-				autoClose={false}
-				newestOnTop={false}
-				closeOnClick={false}
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-			/>
 		</div>
   )
 }

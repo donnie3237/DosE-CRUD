@@ -3,10 +3,11 @@ import axios from 'axios';
 import { NavLink } from "react-router-dom";
 import './data.css'
 import AOS from 'aos'
-import { ToastContainer, toast } from 'react-toastify';
-
 AOS.init();
-function Vdata() {
+
+type Props = {}
+
+function Vdata({}:Props) {
 	const [user, setUser] = useState<any>([]);
 	useEffect(() => {
 		axios.get("https://dose-server.onrender.com/api")
@@ -55,16 +56,7 @@ function Vdata() {
 				</tbody>
 				</table>
 				<br/>
-				<ToastContainer
-				position="top-right"
-				autoClose={false}
-				newestOnTop={false}
-				closeOnClick={false}
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-				/>
-		</div>)};
-
+		</div>
+		)};
 export default Vdata
 

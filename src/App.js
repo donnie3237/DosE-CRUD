@@ -28,6 +28,15 @@ function App() {
             <Route  path='/list/edit/:id' element={<Edit/>}></Route>
             <Route  path='/list/delete/:id' element={<DeletePage/>}></Route>
           </Routes>
+        <ToastContainer
+          position="bottom-right"
+          autoClose={false}
+          newestOnTop={false}
+          closeOnClick={false}
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+			  />
         <Footer />
       </Router>
     </div>
