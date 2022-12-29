@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import Header from './Components/Header/Header.tsx';
 import Footer from './Components/Footer/Footer.tsx';
@@ -11,6 +11,7 @@ import DataPage from './Components/DataPage/DataPage.tsx';
 import Detail from './Components/detail/Detail.tsx';
 import Edit from './Components/Edit/Edit.tsx';
 import DeletePage from './Components/DeletePage/DeletePage.tsx';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   return (
