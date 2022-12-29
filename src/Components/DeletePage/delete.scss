@@ -37,10 +37,11 @@
     }
     .botton{
         display: flex;
-        height: 5vh;
+        height: 50px;
         width: 80vw;
         margin: 20px auto;
         background-color: black;
+        cursor: pointer;
     }
     a{
         width: 50%;
@@ -50,11 +51,17 @@
         align-items: center;
         cursor: pointer;
     }
-}
-.Red{
+    .Red{
     background-color: red;
     color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
 }
+}
+
 .White{
     background-color: white;
     text-decoration: none;

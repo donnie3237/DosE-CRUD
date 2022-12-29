@@ -12,32 +12,33 @@ import Detail from './Components/detail/Detail.tsx';
 import Edit from './Components/Edit/Edit.tsx';
 import DeletePage from './Components/DeletePage/DeletePage.tsx';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   return (
     <div className="App">
         <Router>
-        <Header />
-          <Routes>
-            <Route  path="/" element={<Main/>}></Route>
-            <Route  path='/create' element={<Create/>}></Route>
-            <Route  path='/list' element={<Vdata/>}></Route>
-            <Route  path='/api' element={<ApiPage/>}></Route>
-            <Route  path='/data' element={<DataPage/>}></Route>
-            <Route  path='/list/view/:id' element={<Detail/>}></Route>
-            <Route  path='/list/edit/:id' element={<Edit/>}></Route>
-            <Route  path='/list/delete/:id' element={<DeletePage/>}></Route>
-          </Routes>
-        <ToastContainer
-          position="bottom-right"
-          autoClose={false}
-          newestOnTop={false}
-          closeOnClick={false}
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-			  />
-        <Footer />
+          <Header />
+            <Routes>
+              <Route  path="/" element={<Main/>}></Route>
+              <Route  path='/create' element={<Create/>}></Route>
+              <Route  path='/list' element={<Vdata/>}></Route>
+              <Route  path='/api' element={<ApiPage/>}></Route>
+              <Route  path='/data' element={<DataPage/>}></Route>
+              <Route  path='/list/view/:id' element={<Detail/>}></Route>
+              <Route  path='/list/edit/:id' element={<Edit/>}></Route>
+              <Route  path='/list/delete/:id' element={<DeletePage/>}></Route>
+            </Routes>
+          <ToastContainer
+            position="bottom-right"
+            autoClose={false}
+            newestOnTop={false}
+            closeOnClick={false}
+            rtl={false}
+            pauseOnFocusLoss
+            draggable
+          />
+          <Footer />
       </Router>
     </div>
   );

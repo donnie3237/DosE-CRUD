@@ -2,9 +2,7 @@ import React from 'react'
 import './footer.scss'
 import logo from './img/logo.png'
 
-type Props = {}
-
-function Footer({}:Props) {
+function Footer() {
  return (
     <div className='foott'>
       <div className="ftop">

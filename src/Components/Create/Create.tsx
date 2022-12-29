@@ -5,7 +5,6 @@ import Axios from "axios";
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 AOS.init();
 
 function Create(){
@@ -16,14 +15,14 @@ function Create(){
 	const [desc,setDesc]=useState<string>('')
 	function postData(){
 		if(name !== '' && age !== 0 && height !== 0 && weight !== 0 && desc !== ''){
-		Axios.post("https://dose-server.onrender.com/add",{
-			name :name,
-			age:age,
-			height:height,
-			weight:weight,
-			descrip :desc
-		}).then((response)=>{
-			if(response.data = 'success'){
+			Axios.post("https://dose-server.onrender.com/add",{
+				name :name,
+				age:age,
+				height:height,
+				weight:weight,
+				descrip :desc
+			}).then((response)=>{
+				if(response.data = 'success'){
 				toast.success(`${name} has been created!`,{
 					position:"bottom-right"}
 				)
@@ -31,27 +30,28 @@ function Create(){
 				const TheAge = document.getElementById('age') as HTMLInputElement ;
 				const TheHeight =document.getElementById('height') as HTMLInputElement ;
 				const TheWeight = document.getElementById('weight') as HTMLInputElement ;
-				TheName.value = ''
-				TheAge.value = ''
-				.value = ''
-				document.getElementById('weight').value = ''
-				document.getElementById('desc').value = ''
+				const TheDesc = document.getElementById('desc') as HTMLInputElement ;
+				TheName.value = '' ;
+				TheAge.value = '' ;
+				TheHeight.value = '' ;
+				TheWeight.value = '' ;
+				TheDesc.value = '' ;
 				setAge(0)
 				setName('')
 				setHeight(0)
 				setWeight(0)
 				setDesc('')
+			}else {
+				toast.warn('error')
 			}
 		})
-		
-		
 		}else{
 			toast.warn("กรุณากรอกข้อมูลให้ครบถ้วน!!")
 		}
 	}
 	function handleClick(){
 		const w50 : any = document.getElementById('w50') as HTMLElement ;	
-		const change : any= document.getElementById('change') as HTMLElement ;
+		const change : any = document.getElementById('change') as HTMLElement ;
 		w50.style.width = '50%';
 		w50.style.transition = 'width 1s';
 		change.style.display = 'none';
@@ -78,7 +78,6 @@ function Create(){
 						<input type="number" 
 							placeholder='YourAge(Y)' 
 							id='age' 
-							maxLength='10'
 							onChange={(e) => {setAge(e.target.value)}}
 						/>
 						</div>
