@@ -44,7 +44,7 @@ function Create(){
 				setDesc('')
 				}
 		}).catch(
-			(error)=>{
+			()=>{
 				toast.warn("server is not ready!!")
 			}
 		)

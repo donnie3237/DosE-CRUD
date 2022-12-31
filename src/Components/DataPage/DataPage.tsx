@@ -4,8 +4,6 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import {useState} from 'react'
 import {HashLink} from 'react-router-hash-link'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 
 AOS.init();
 function DataPage() {
@@ -92,15 +90,6 @@ function DataPage() {
                 </div>
           </div>
         </div>
-        <ToastContainer
-				position="top-right"
-				autoClose={false}
-				newestOnTop={false}
-				closeOnClick={false}
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-			/>
     </div>
   )
 }

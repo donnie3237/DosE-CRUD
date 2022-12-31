@@ -31,7 +31,7 @@ function Edit() {
 				const Age :any = document.getElementById('age') as HTMLInputElement;
 				const Height :any = document.getElementById('height') as HTMLInputElement;
 				const Weight :any = document.getElementById('weight') as HTMLInputElement;
-				const desc :any = document.getElementById('desc') as HTMLInputElement;
+				const desc  = document.getElementById('desc') as HTMLTextAreaElement;
 				setName(NaMe.value)
 			  	setAge(Age.value)
 			 	setHeight(Height.value)
@@ -43,13 +43,15 @@ function Edit() {
 	);
 	function updateData() {
 			axios.put(`https://dose-server.onrender.com/update/${userId}`,{
-						name :name,
-						age:age,
-						height:height,
-						weight:weight,
-						descrip :desc
+						name : name,
+						age : age,
+						height : height,
+						weight : weight,
+						descrip : desc
 					}).then((Response)=>{
-						if(Response.data === "Updated")
+						if(Response.data === "Updated"){
+							toast.success(`${name} has been updated`)
+						}
 					});
 			alert(`${name} has been Updateted!`)
 			navigate("/list");
@@ -62,7 +64,7 @@ function Edit() {
             <input id='age' type="number" placeholder='New age' defaultValue={user.age}  onChange={(e) => {setAge(e.target.value)}}/>
             <input id='height' type="number" placeholder='New height' defaultValue={user.height} onChange={(e) => {setHeight(e.target.value)}}/>
             <input id='weight' type="number" placeholder='New weight' defaultValue={user.weight} onChange={(e) => {setWeight(e.target.value)}}/>
-            <textarea id='desc' rows="5" placeholder='New Description' defaultValue={user.descrip} onChange={(e) => {setDesc(e.target.value)}}></textarea>
+            <textarea id='desc' placeholder='New Description' defaultValue={user.descrip} onChange={(e) => {setDesc(e.target.value)}}></textarea>
             <div className="btng">
                 <button className='editt' onClick={updateData}>Edit</button>
                 <NavLink to='/list' className='etli'>Close</NavLink>
